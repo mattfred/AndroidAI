@@ -1,0 +1,2 @@
+# AndroidAI
+Android AI project
