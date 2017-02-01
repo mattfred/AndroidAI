@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupListView() {
         RecyclerView messageArea = (RecyclerView) findViewById(R.id.message_area);
         List<Message> messages = new ArrayList<>();
-        adapter = new MessageAdapter(messages);
+        adapter = new MessageAdapter(this, messages);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         messageArea.setLayoutManager(mLayoutManager);
         messageArea.setItemAnimator(new DefaultItemAnimator());

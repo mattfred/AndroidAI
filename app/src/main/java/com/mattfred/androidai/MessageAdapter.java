@@ -1,6 +1,8 @@
 package com.mattfred.androidai;
 
+import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,9 +18,11 @@ import java.util.List;
 class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
     private List<Message> messages;
+    private Context context;
 
-    MessageAdapter(List<Message> messages) {
+    MessageAdapter(Context context, List<Message> messages) {
         this.messages = messages;
+        this.context = context;
     }
 
     void addMessage(Message message) {
@@ -38,7 +42,7 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
         if (message.isUser()) {
             holder.rightSpace.setVisibility(View.GONE);
             holder.text.setTextColor(Color.WHITE);
-            holder.text.setBackgroundColor(Color.GREEN);
+            holder.text.setBackgroundColor(ContextCompat.getColor(context, R.color.darkGreen));
         } else {
             holder.leftSpace.setVisibility(View.GONE);
             holder.text.setTextColor(Color.BLACK);
