@@ -13,15 +13,15 @@ import java.util.List;
  * Message Adapter
  */
 
-public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
+class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
     private List<Message> messages;
 
-    public MessageAdapter(List<Message> messages) {
+    MessageAdapter(List<Message> messages) {
         this.messages = messages;
     }
 
-    public void addMessage(Message message) {
+    void addMessage(Message message) {
         messages.add(message);
         this.notifyDataSetChanged();
     }
