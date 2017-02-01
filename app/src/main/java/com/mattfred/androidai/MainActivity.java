@@ -2,7 +2,11 @@ package com.mattfred.androidai;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,30 +15,59 @@ import android.widget.TextView;
 import com.joanzapata.iconify.IconDrawable;
 import com.joanzapata.iconify.fonts.FontAwesomeIcons;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText input;
-    private Button submit;
+    private MessageAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupUI();
+        setupListView();
+    }
 
+    private void setupUI() {
         input = (EditText) findViewById(R.id.input);
-        submit = (Button) findViewById(R.id.button);
+        Button submit = (Button) findViewById(R.id.button);
         submit.setBackground(new IconDrawable(this, FontAwesomeIcons.fa_arrow_right));
-        submit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!input.getText().toString().equals("")) {
+                    addMessage(new Message(true, input.getText().toString()));
+                }
+            }
+        });
+        input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
-                if (actionId == EditorInfo.IME_ACTION_SEND) {
-                    // // TODO: 1/31/17 send message 
+                if (actionId == EditorInfo.IME_ACTION_SEND && !input.getText().toString().equals("")) {
+                    addMessage(new Message(true, input.getText().toString()));
                     handled = true;
                 }
                 return handled;
             }
         });
+    }
 
+    private void setupListView() {
+        RecyclerView messageArea = (RecyclerView) findViewById(R.id.message_area);
+        List<Message> messages = new ArrayList<>();
+        adapter = new MessageAdapter(messages);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        messageArea.setLayoutManager(mLayoutManager);
+        messageArea.setItemAnimator(new DefaultItemAnimator());
+        messageArea.setAdapter(adapter);
+    }
+
+    private void addMessage(Message message) {
+        adapter.addMessage(message);
+        input.setText("");
     }
 }
