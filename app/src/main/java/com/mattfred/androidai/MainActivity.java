@@ -6,14 +6,9 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.joanzapata.iconify.IconDrawable;
-import com.joanzapata.iconify.fonts.FontAwesomeIcons;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,16 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupUI() {
         input = (EditText) findViewById(R.id.input);
-        Button submit = (Button) findViewById(R.id.button);
-        submit.setBackground(new IconDrawable(this, FontAwesomeIcons.fa_arrow_right));
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!input.getText().toString().equals("")) {
-                    addMessage(new Message(true, input.getText().toString()));
-                }
-            }
-        });
         input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
