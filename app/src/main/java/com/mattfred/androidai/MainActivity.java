@@ -10,18 +10,23 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mattfred.androidai.models.Message;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainActivityController.WatsonResults {
 
     private EditText input;
     private MessageAdapter adapter;
+    private MainActivityController controller;
+    private RecyclerView messageArea;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        controller = new MainActivityController(this);
         setupUI();
         setupListView();
     }
@@ -42,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupListView() {
-        RecyclerView messageArea = (RecyclerView) findViewById(R.id.message_area);
+        messageArea = (RecyclerView) findViewById(R.id.message_area);
         List<Message> messages = new ArrayList<>();
         adapter = new MessageAdapter(this, messages);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -53,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void addMessage(Message message) {
         adapter.addMessage(message);
+        controller.analyzeText(message.getContent());
         input.setText("");
+    }
+
+    @Override
+    public void onWatsonResults(int color) {
+        messageArea.setBackgroundColor(color);
     }
 }
