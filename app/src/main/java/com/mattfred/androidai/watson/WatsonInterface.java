@@ -1,4 +1,4 @@
-package com.mattfred.androidai;
+package com.mattfred.androidai.watson;
 
 import com.mattfred.androidai.models.WatsonResponse;
 import com.mattfred.androidai.models.WatsonText;

@@ -1,4 +1,4 @@
-package com.mattfred.androidai;
+package com.mattfred.androidai.watson;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
