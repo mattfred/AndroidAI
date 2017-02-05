@@ -1,13 +1,14 @@
-package com.mattfred.androidai;
+package com.mattfred.androidai.adapters;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.mattfred.androidai.R;
+import com.mattfred.androidai.models.Message;
 
 import java.util.List;
 
@@ -15,17 +16,15 @@ import java.util.List;
  * Message Adapter
  */
 
-class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
+public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
     private List<Message> messages;
-    private Context context;
 
-    MessageAdapter(Context context, List<Message> messages) {
+    public MessageAdapter(List<Message> messages) {
         this.messages = messages;
-        this.context = context;
     }
 
-    void addMessage(Message message) {
+    public void addMessage(Message message) {
         messages.add(message);
         this.notifyDataSetChanged();
     }
@@ -42,7 +41,7 @@ class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHold
         if (message.isUser()) {
             holder.rightSpace.setVisibility(View.GONE);
             holder.text.setTextColor(Color.WHITE);
-            holder.text.setBackgroundColor(ContextCompat.getColor(context, R.color.darkGreen));
+            holder.text.setBackgroundColor(Color.DKGRAY);
         } else {
             holder.leftSpace.setVisibility(View.GONE);
             holder.text.setTextColor(Color.BLACK);

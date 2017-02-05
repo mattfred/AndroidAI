@@ -1,4 +1,4 @@
-package com.mattfred.androidai;
+package com.mattfred.androidai.models;
 
 /**
  * Message Object
@@ -14,11 +14,11 @@ public class Message {
         this.content = content;
     }
 
-    boolean isUser() {
+    public boolean isUser() {
         return user;
     }
 
-    String getContent() {
+    public String getContent() {
         return content;
     }
 }

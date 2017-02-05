@@ -1,4 +1,4 @@
-package com.mattfred.androidai;
+package com.mattfred.androidai.utils;
 
 import android.app.Application;
 
