@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 
+import opennlp.tools.parser.Parse;
 import opennlp.tools.util.Span;
 import timber.log.Timber;
 
@@ -26,6 +27,15 @@ public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
 
         String text = strings[0];
 
+        Parse[] parses = NLP.getParse(context, text);
+        StringBuffer sb = new StringBuffer();
+        if (parses != null) {
+            for (Parse parse : parses) {
+                parse.show(sb);
+                Timber.e(sb.toString());
+            }
+        }
+
         // get tokens
         String[] results = NLP.getTokens(context, text);
         if (results != null) {
@@ -34,6 +44,13 @@ public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
             }
         } else {
             Timber.e("results is null");
+        }
+
+        String[] partsOfSpeech = NLP.getPartsOfSpeech(context, results);
+        if (partsOfSpeech != null) {
+            for (String string : partsOfSpeech) {
+                Timber.e(string);
+            }
         }
 
         Span[] names = NLP.getNames(context, results);
