@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Android AI</string>
     <string name="type_message_here">type message here</string>
+    <string name="ai_thinking">AI thinking …</string>
 </resources>

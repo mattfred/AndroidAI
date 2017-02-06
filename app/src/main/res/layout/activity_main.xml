@@ -6,17 +6,17 @@
     android:layout_height="match_parent"
     tools:context="com.mattfred.androidai.views.MainActivity">
 
-        <EditText
-            android:id="@+id/input"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
-            android:hint="@string/type_message_here"
-            android:imeOptions="actionSend"
-            android:inputType="textCapSentences|textAutoCorrect"
-            android:padding="16dp" />
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/type_message_here"
+        android:imeOptions="actionSend"
+        android:inputType="textCapSentences|textAutoCorrect"
+        android:padding="16dp" />
 
     <View
         android:id="@+id/space"
@@ -32,5 +32,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignBottom="@id/space" />
+
+    <TextView
+        android:id="@+id/thinking_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/space"
+        android:layout_margin="5dp"
+        android:background="@android:color/black"
+        android:padding="5dp"
+        android:text="@string/ai_thinking"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:visibility="gone" />
 
 </RelativeLayout>
