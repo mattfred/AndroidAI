@@ -40,10 +40,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         Message message = messages.get(position);
         if (message.isUser()) {
             holder.rightSpace.setVisibility(View.GONE);
+            holder.leftSpace.setVisibility(View.VISIBLE);
             holder.text.setTextColor(Color.WHITE);
             holder.text.setBackgroundColor(Color.DKGRAY);
         } else {
             holder.leftSpace.setVisibility(View.GONE);
+            holder.rightSpace.setVisibility(View.VISIBLE);
             holder.text.setTextColor(Color.BLACK);
             holder.text.setBackgroundColor(Color.LTGRAY);
         }

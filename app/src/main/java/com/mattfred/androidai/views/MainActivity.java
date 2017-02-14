@@ -8,6 +8,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,12 +21,14 @@ import com.mattfred.androidai.models.Message;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements MainActivityController.WatsonResults {
+public class MainActivity extends AppCompatActivity implements MainActivityController.AIResponse {
 
     private EditText input;
     private MessageAdapter adapter;
     private MainActivityController controller;
     private RecyclerView messageArea;
+    private TextView thinking;
+
     private Handler handler = new Handler();
     private int currentRed = 250;
     private int currentBlue = 250;
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        thinking = (TextView) findViewById(R.id.thinking_indicator);
         controller = new MainActivityController(this);
         setupUI();
         setupListView();
@@ -59,17 +63,26 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         messageArea = (RecyclerView) findViewById(R.id.message_area);
         List<Message> messages = new ArrayList<>();
         adapter = new MessageAdapter(messages);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        messageArea.setLayoutManager(mLayoutManager);
+        messageArea.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         messageArea.setItemAnimator(new DefaultItemAnimator());
         messageArea.setAdapter(adapter);
     }
 
-    private void addMessage(Message message) {
+    private void addMessage(final Message message) {
         adapter.addMessage(message);
         messageArea.scrollToPosition(adapter.getItemCount() - 1);
-        controller.analyzeText(message.getContent());
         input.setText("");
+
+        if (message.isUser()) {
+            thinking.setVisibility(View.VISIBLE);
+            (new Thread() {
+                @Override
+                public void run() {
+                    controller.analyzeText(message.getContent());
+                }
+            }).start();
+        }
+
     }
 
     @Override
@@ -98,5 +111,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
                 }
             }
         }).start();
+    }
+
+    @Override
+    public void sendResponse(String text) {
+        thinking.setVisibility(View.GONE);
+        if (text != null) {
+            addMessage(new Message(false, text));
+        }
     }
 }

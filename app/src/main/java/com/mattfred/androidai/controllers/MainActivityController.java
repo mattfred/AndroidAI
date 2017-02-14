@@ -1,7 +1,9 @@
 package com.mattfred.androidai.controllers;
 
+import android.content.Context;
 import android.util.Log;
 
+import com.mattfred.androidai.apache.ApacheAnalyzer;
 import com.mattfred.androidai.models.DocumentTone;
 import com.mattfred.androidai.models.Tone;
 import com.mattfred.androidai.models.ToneDetails;
@@ -18,17 +20,21 @@ import retrofit2.Response;
  * Main Activity Controller
  */
 
-public class MainActivityController {
+public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
     private static final String TAG = "M-A-Controller";
 
-    private WatsonResults listener;
+    private AIResponse listener;
 
-    public MainActivityController(WatsonResults listener) {
+    public MainActivityController(AIResponse listener) {
         this.listener = listener;
     }
 
     public void analyzeText(String text) {
+
+        ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
+        apacheAnalyzer.execute(text);
+
         WatsonText watsonText = new WatsonText(text);
         WatsonInterface watsonInterface = WatsonService.getWatsonService();
         Call<WatsonResponse> call = watsonInterface.getDocumentTone("2016-05-19", watsonText);
@@ -97,7 +103,14 @@ public class MainActivityController {
         return (int) num;
     }
 
-    public interface WatsonResults {
+    @Override
+    public void onResults(String response) {
+        if (listener != null) listener.sendResponse(response);
+    }
+
+    public interface AIResponse {
         void onWatsonResults(int red, int green, int blue);
+
+        void sendResponse(String text);
     }
 }
