@@ -3,6 +3,7 @@ package com.mattfred.androidai.controllers;
 import android.content.Context;
 import android.util.Log;
 
+import com.mattfred.androidai.ai.Ari;
 import com.mattfred.androidai.apache.ApacheAnalyzer;
 import com.mattfred.androidai.models.DocumentTone;
 import com.mattfred.androidai.models.Tone;
@@ -25,9 +26,11 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
     private static final String TAG = "M-A-Controller";
 
     private AIResponse listener;
+    private Ari ari;
 
     public MainActivityController(AIResponse listener) {
         this.listener = listener;
+        this.ari = new Ari();
     }
 
     public void analyzeText(String text) {
@@ -49,7 +52,10 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
             }
         });
+    }
 
+    public void tryAri(String text) {
+        if (listener != null) listener.sendResponse(ari.preprocess_input(text));
     }
 
     private void analyzeResults(DocumentTone documentTone) {

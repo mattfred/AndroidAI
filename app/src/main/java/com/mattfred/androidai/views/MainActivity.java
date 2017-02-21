@@ -75,12 +75,14 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
 
         if (message.isUser()) {
             thinking.setVisibility(View.VISIBLE);
-            (new Thread() {
-                @Override
-                public void run() {
-                    controller.analyzeText(message.getContent());
-                }
-            }).start();
+//            (new Thread() {
+//                @Override
+//                public void run() {
+//                    controller.analyzeText(message.getContent());
+//                }
+//            }).start();
+
+            controller.tryAri(message.getContent());
         }
 
     }
