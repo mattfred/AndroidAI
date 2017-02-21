@@ -1,6 +1,5 @@
 package com.mattfred.androidai.controllers;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.mattfred.androidai.ai.Ari;
@@ -31,12 +30,13 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
     public MainActivityController(AIResponse listener) {
         this.listener = listener;
         this.ari = new Ari();
+        onResults(ari.signon());
     }
 
     public void analyzeText(String text) {
-
-        ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
-        apacheAnalyzer.execute(text);
+//
+//        ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
+//        apacheAnalyzer.execute(text);
 
         WatsonText watsonText = new WatsonText(text);
         WatsonInterface watsonInterface = WatsonService.getWatsonService();

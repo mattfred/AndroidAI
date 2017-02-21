@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        thinking = (TextView) findViewById(R.id.thinking_indicator);
-        controller = new MainActivityController(this);
         setupUI();
         setupListView();
+        thinking = (TextView) findViewById(R.id.thinking_indicator);
+        controller = new MainActivityController(this);
     }
 
     private void setupUI() {
@@ -75,12 +75,12 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
 
         if (message.isUser()) {
             thinking.setVisibility(View.VISIBLE);
-//            (new Thread() {
-//                @Override
-//                public void run() {
-//                    controller.analyzeText(message.getContent());
-//                }
-//            }).start();
+            (new Thread() {
+                @Override
+                public void run() {
+                    controller.analyzeText(message.getContent());
+                }
+            }).start();
 
             controller.tryAri(message.getContent());
         }

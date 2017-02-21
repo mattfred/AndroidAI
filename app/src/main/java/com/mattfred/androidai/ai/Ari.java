@@ -667,10 +667,10 @@ public class Ari {
         restore_input();
     }
 
-    public void signon() {
+    public String signon() {
         handle_event("SIGNON**");
         select_response();
-        getResponse();
+        return getResponse();
     }
 
     public void select_response() {
