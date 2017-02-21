@@ -7,9 +7,8 @@ import java.util.Objects;
 
 public class Ari {
 
-    final int maxResp = 6;
-    final String delim = "?!.;,";
-    final String KnowledgeBase[][][] =
+    private final int maxResp = 6;
+    private final String KnowledgeBase[][][] =
             {
                     {{"WHAT IS YOUR NAME"},
                             {"MY NAME IS ARI.",
@@ -484,7 +483,6 @@ public class Ari {
     private String sInputBackup = "";
     private String sSubject = "";
     private String sKeyWord = "";
-    private boolean bQuitProgram = false;
     private ArrayList<String> respList = new ArrayList<>(maxResp);
 
     private String transposList[][] =
@@ -527,11 +525,11 @@ public class Ari {
 //        preprocess_input();
 //    }
 
-    public void set_event(String str) {
+    private void set_event(String str) {
         sEvent = str;
     }
 
-    public String respond() {
+    private String respond() {
         save_prev_response();
         set_event("BOT UNDERSTAND**");
 
@@ -543,10 +541,6 @@ public class Ari {
             handle_user_repetition();
         } else {
             find_match();
-        }
-
-        if (user_want_to_quit()) {
-            bQuitProgram = true;
         }
 
         if (!bot_understand()) {
@@ -564,17 +558,12 @@ public class Ari {
         return "";
     }
 
-
-    public boolean quit() {
-        return bQuitProgram;
-    }
-
     // make a search for the user's input
     // inside the database of the program
-    public void find_match() {
+    private void find_match() {
         respList.clear();
         String bestKeyWord = "";
-        ArrayList<Integer> index_arrayList = new ArrayList<Integer>(maxResp);
+        ArrayList<Integer> index_arrayList = new ArrayList<>(maxResp);
 
         for (int i = 0; i < KnowledgeBase.length; ++i) {
             String[] keyWordList = KnowledgeBase[i][0];
@@ -629,7 +618,7 @@ public class Ari {
         return str;
     }
 
-    public void handle_repetition() {
+    private void handle_repetition() {
         if (respList.size() > 0) {
             respList.remove(0);
         }
@@ -643,7 +632,7 @@ public class Ari {
         select_response();
     }
 
-    public void handle_user_repetition() {
+    private void handle_user_repetition() {
         if (same_input()) {
             handle_event("REPETITION T1**");
         } else if (similar_input()) {
@@ -651,7 +640,7 @@ public class Ari {
         }
     }
 
-    public void handle_event(String str) {
+    private void handle_event(String str) {
         save_prev_event();
         set_event(str);
 
@@ -673,36 +662,36 @@ public class Ari {
         return getResponse();
     }
 
-    public void select_response() {
+    private void select_response() {
         Collections.shuffle(respList);
         sResponse = respList.get(0);
     }
 
-    public void save_prev_input() {
+    private void save_prev_input() {
         sPrevInput = sInput;
     }
 
-    public void save_prev_response() {
+    private void save_prev_response() {
         sPrevResponse = sResponse;
     }
 
-    public void save_prev_event() {
+    private void save_prev_event() {
         sPrevEvent = sEvent;
     }
 
-    public void save_input() {
+    private void save_input() {
         sInputBackup = sInput;
     }
 
-    public void set_input(String str) {
+    private void set_input(String str) {
         sInput = str;
     }
 
-    public void restore_input() {
+    private void restore_input() {
         sInput = sInputBackup;
     }
 
-    public String getResponse() {
+    private String getResponse() {
         return sResponse;
     }
 
@@ -715,59 +704,56 @@ public class Ari {
         return respond();
     }
 
-    public boolean bot_repeat() {
+    private boolean bot_repeat() {
         return (sPrevResponse.length() > 0 &&
                 Objects.equals(sResponse, sPrevResponse));
     }
 
-    public boolean user_repeat() {
+    private boolean user_repeat() {
         return (sPrevInput.length() > 0 &&
                 ((Objects.equals(sInput, sPrevInput)) ||
                         (sInput.contains(sPrevInput)) ||
                         (sPrevInput.contains(sInput))));
     }
 
-    public boolean bot_understand() {
+    private boolean bot_understand() {
         return respList.size() > 0;
     }
 
-    public boolean null_input() {
+    private boolean null_input() {
         return (sInput.length() == 0 && sPrevInput.length() != 0);
     }
 
-    public boolean null_input_repetition() {
+    private boolean null_input_repetition() {
         return (sInput.length() == 0 && sPrevInput.length() == 0);
     }
 
-    public boolean user_want_to_quit() {
-        return sInput.contains("BYE");
-    }
-
-    public boolean same_event() {
+    private boolean same_event() {
         return (sEvent.length() > 0 && Objects.equals(sEvent, sPrevEvent));
     }
 
-    public boolean no_response() {
+    private boolean no_response() {
         return respList.size() == 0;
     }
 
-    public boolean same_input() {
+    private boolean same_input() {
         return (sInput.length() > 0 && Objects.equals(sInput, sPrevInput));
     }
 
-    public boolean similar_input() {
+    private boolean similar_input() {
         return (sInput.length() > 0 &&
                 (sInput.contains(sPrevInput) ||
                         sPrevInput.contains(sInput)));
     }
 
-    public boolean isPunc(char ch) {
+    private boolean isPunc(char ch) {
+        String delim = "?!.;,";
         return delim.indexOf(ch) != -1;
     }
 
     // removes punctuation and redundant
     // spaces from the user's input
-    public String cleanString(String str) {
+    private String cleanString(String str) {
         StringBuilder temp = new StringBuilder(str.length());
         char prevChar = 0;
         for (int i = 0; i < str.length(); ++i) {
