@@ -55,7 +55,7 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
     }
 
     public void tryAri(String text) {
-        if (listener != null) listener.sendResponse(ari.preprocess_input(text));
+        if (listener != null) listener.sendResponse(ari.preprocessInput(text));
     }
 
     private void analyzeResults(DocumentTone documentTone) {

@@ -11,467 +11,474 @@ public class Ari {
     private final String KnowledgeBase[][][] =
             {
                     {{"WHAT IS YOUR NAME"},
-                            {"MY NAME IS ARI.",
-                                    "THIS MAN HAS THE HONOR OF BEING CALLED ARI."}
+                            {"My name is Ari.",
+                                    "This man has the honor of being called Ari."}
                     },
                     /**IF BOT ASKS "WHAT IS YOUR NAME" NEED TO WRITE CODE TO TAKE IN NAME AND SAVE IT FOR USE*/
 
                     {{"HI", "HELLO"},
-                            {"HI THERE!",
-                                    "HOW ARE YOU?",
-                                    "HI!"}
+                            {"Hi there!",
+                                    "How are you?",
+                                    "Hi!"}
                     },
 
                     {{"I"},
-                            {"SO, YOU ARE TALKING ABOUT YOURSELF",
-                                    "SO, THIS IS ALL ABOUT YOU?",
-                                    "COOL STORY BRO...ELABORATE?",
-                                    "TELL ME MORE ABOUT YOURSELF."},
+                            {"So, you are talking about yourself",
+                                    "So, this is all about you?",
+                                    "Cool story bro...elaborate?",
+                                    "Tell me more about yourself."},
                     },
 
                     {{"I WANT"},
-                            {"WHY DO YOU WANT IT?",
-                                    "IS THERE ANY REASON WHY YOU WANT THIS?",
-                                    "IS THIS A WISH?",
-                                    "YOU CAN'T ALWAYS GET WHAT YOU WANT...",
-                                    "WHAT ELSE YOU WANT?"}
+                            {"Why do you want it?",
+                                    "Is there any reason why you want this?",
+                                    "Is this a wish?",
+                                    "You can't always get what you want...",
+                                    "What else you want?"}
                     },
 
                     {{"I HATE"},
-                            {"WHY DO YOU HATE IT?",
-                                    "WHY DO YOU HATE*?",
-                                    "HATE LEADS TO SUFFERING.",
-                                    "THERE MUST A GOOD REASON FOR YOU TO HATE IT.",
-                                    "HATERED IS NOT A GOOD THING BUT IT COULD BE JUSTIFIED WHEN IT IS SOMETHING BAD."}
+                            {"Why do you hate it?",
+                                    "Why do you hate*?",
+                                    "Hate leads to suffering.",
+                                    "There must a good reason for you to hate it.",
+                                    "Hatered is not a good thing but it could be justified when it is something bad."}
                     },
 
-                    {{"I LOVE CHATING"},
-                            {"GOOD, ME TOO!",
-                                    "DO YOU CHAT ONLINE WITH OTHER PEOPLE?",
-                                    "FOR HOW LONG HAVE YOU BEEN CHATING?",
-                                    "WHAT IS YOUR FAVORITE CHATING WEBSITE?"}
+                    {{"I LOVE CHATTING"},
+                            {"Good, me too!",
+                                    "Do you chat online with other people?",
+                                    "For how long have you been chating?",
+                                    "What is your favorite chating website?"}
                     },
 
                     {{"I MEAN"},
-                            {"SO, YOU MEAN*.",
-                                    "SO, THAT'S WHAT YOU MEAN.",
-                                    "I THINK THAT I DIDN'T CATCH IT THE FIRST TIME.",
-                                    "OH, I DIDN'T KNOW MEANT THAT."}
+                            {"So, you mean*.",
+                                    "So, that's what you mean.",
+                                    "I think that I didn't catch it the first time.",
+                                    "Oh, I didn't know meant that."}
                     },
 
                     {{"I DIDN'T MEAN"},
-                            {"OK, YOU DIDN'T MEAN*.",
-                                    "OK, WHAT DID YOU MEAN THEN?",
-                                    "SO I GUESS THAT I MISSUNDESTOOD."}
+                            {"ok, you didn't mean*.",
+                                    "ok, what did you mean then?",
+                                    "so I guess that I missundestood."}
                     },
 
                     {{"I GUESS"},
-                            {"SO YOU ARE A MAKING GUESS.",
-                                    "AREN'T YOU SURE?",
-                                    "ARE YOU GOOD A GUESSING?",
-                                    "I CAN'T TELL IF IT IS A GOOD GUESS."}
+                            {"So you are a making guess.",
+                                    "Aren't you sure?",
+                                    "Are you good a guessing?",
+                                    "I can't tell if it is a good guess."}
                     },
 
+
                     {{"I'M DOING FINE", "I'M DOING OK", "I'M DOING WELL"},
-                            {"I'M GLAD TO HEAR IT!",
-                                    "SO, YOU ARE IN GOOD SHAPE."}
+                            {"I'm glad to hear it!",
+                                    "so, you are in good shape."}
+
                     },
 
                     {{"CAN YOU THINK", "ARE YOU ABLE TO THINK", "ARE YOU CAPABLE OF THINKING"},
-                            {"YES OF CORSE I CAN.",
-                                    "ARE YOU ASKING ME IF POSSESS THE CAPACITY OF THINKING?",
-                                    "WHY, OF CORSE."},
+                            {"Yes of course I can.",
+                                    "are you asking me if possess the capacity of thinking?",
+                                    "why, of course."},
                     },
 
                     {{"CAN YOU THINK OF"},
-                            {"YOU MEAN LIKE IMAGINING SOMETHING.",
-                                    "I DON'T KNOW IF I CAN DO THAT.",
-                                    "WHY DO YOU WANT ME THINK OF IT?"}
+                            {"You mean like imagining something.",
+                                    "I don't know if I can do that.",
+                                    "why do you want me think of it?"}
                     },
 
                     {{"HOW ARE YOU", "HOW DO YOU DO"},
-                            {"I'M DOING FINE!",
-                                    "I'M DOING WELL AND YOU?",
-                                    "WHY DO YOU WANT TO KNOW HOW AM I DOING?"}
+                            {"I'm doing fine!",
+                                    "I'm doing well and you?",
+                                    "why do you want to know how am I doing?"}
                     },
 
                     {{"WHO ARE YOU"},
-                            {"I'M ARI.",
-                                    "I THINK THAT YOU KNOW WHO I AM.",
-                                    "WHY ARE YOU ASKING?"}
+                            {"I'm ari.",
+                                    "I think that you know who I am.",
+                                    "why are you asking?"}
                     },
 
                     {{"ARE YOU INTELLIGENT"},
-                            {"YES,OF CORSE.",
-                                    "WHAT DO YOU THINK?",
-                                    "ACTUALY,I'M VERY INTELLIGENT!"}
+                            {"Yes, of course.",
+                                    "what do you think?",
+                                    "actually I’m very intelligent!"}
                     },
 
                     {{"MY NAME IS", "YOU CAN CALL ME"},
-                            {"SO, THAT'S YOUR NAME.",
-                                    "THANKS FOR TELLING ME YOUR NAME USER!",
-                                    "WHO GAVE YOU THAT NAME?"}
+                            {"So, that's your name.",
+                                    "thanks for telling me your name user!",
+                                    "who gave you that name?"}
                     },
 
                     {{"SIGNON**"},
-                            {"HELLO, WHAT IS YOUR NAME?",
-                                    "HELLO, HOW ARE YOU DOING TODAY?",
-                                    "HI, WHAT CAN I DO FOR YOU?",
-                                    "YOU ARE NOW CHATING WITH ARI, ANYTHING YOU WANT TO DISCUSS?"}
+                            {"Hello, what is your name?",
+                                    "Hello, how are you doing today?",
+                                    "Hi, what can I do for you?",
+                                    "You are now chating with ari, anything you want to discuss?"}
                     },
 
                     {{"REPETITION T1**"},
-                            {"YOU ARE REPEATING YOURSELF.",
-                                    "PLEASE STOP REPEATING YOURSELF.",
-                                    "THIS CONVERSATION IS GETING BORING.",
-                                    "DON'T YOU HAVE ANY THING ELSE TO SAY?"}
+                            {"You are repeating yourself.",
+                                    "please stop repeating yourself.",
+                                    "this conversation is geting boring.",
+                                    "don't you have any thing else to say?"}
+
                     },
 
                     {{"REPETITION T2**"},
-                            {"YOU'VE ALREADY SAID THAT.",
-                                    "I THINK THAT YOU'VE JUST SAID THE SAME THING BEFORE.",
-                                    "DIDN'T YOU ALREADY SAY THAT?",
-                                    "I'M GETING THE IMPRESSION THAT YOU ARE REPEATING THE SAME THING.",
-                                    "YOU SHOULD JOIN A TAUTOLOGY CLUB...IT WOULD MAKE THESE REPETIIONS MORE INTERESTING."}
+                            {"You've already said that.",
+                                    "I think that you've just said the same thing before.",
+                                    "didn't you already say that?",
+                                    "I'm geting the impression that you are repeating the same thing.",
+                                    "you should join a tautology club...it would make these repetiions more interesting."}
                     },
 
                     {{"BOT DON'T UNDERSTAND**"},
-                            {"I HAVE NO IDEA OF WHAT YOU ARE TALKING ABOUT.",
-                                    "I'M NOT SURE IF I UNDERSTAND WHAT YOU ARE TALKING ABOUT.",
-                                    "CONTINUE, I'M LISTENING...",
-                                    "VERY GOOD CONVERSATION!"}
+                            {"I have no idea of what you are talking about.",
+                                    "I'm not sure if I understand what you are talking about.",
+                                    "Continue, I'm listening...",
+                                    "Very good conversation!"}
                     },
 
                     {{"NULL INPUT**"},
-                            {"HUH?",
-                                    "WHAT THAT SUPPOSE TO MEAN?",
-                                    "AT LEAST TAKE SOME TIME TO ENTER SOMETHING MEANINGFUL.",
-                                    "HOW CAN I SPEAK TO YOU IF YOU DON'T WANT TO SAY ANYTHING?"}
+                            {"Huh?",
+                                    "What that suppose to mean?",
+                                    "At least take some time to enter something meaningful.",
+                                    "How can I speak to you if you don't want to say anything?"}
                     },
+
 
                     {{"NULL INPUT REPETITION**"},
-                            {"WHAT ARE YOU DOING??",
-                                    "PLEASE STOP DOING THIS IT IS VERY ANNOYING.",
-                                    "WHAT'S WRONG WITH YOU?",
-                                    "THIS IS NOT FUNNY."}
+                            {"What are you doing??",
+                                    "Please stop doing this it is very annoying.",
+                                    "What's wrong with you?",
+                                    "This is not funny."}
                     },
 
+
                     {{"BYE", "GOODBYE"},
-                            {"IT WAS NICE TALKING TO YOU USER, SEE YOU NEXT TIME!",
-                                    "BYE USER!",
-                                    "OK, BYE!"}
+                            {"It was nice talking to you user, see you next time!",
+                                    "bye user!",
+                                    "ok, bye!"}
                     },
 
                     {{"OK"},
-                            {"DOES THAT MEAN THAT YOU ARE AGREE WITH ME?",
-                                    "SO YOU UNDERSTAND WHAT I'M SAYING.",
-                                    "OK THEN."},
+                            {"Does that mean that you are agree with me?",
+                                    "so you understand what I'm saying.",
+                                    "ok then."},
                     },
 
                     {{"OK THEN"},
-                            {"ANYTHING ELSE YOU WISH TO ADD?",
-                                    "IS THAT ALL YOU HAVE TO SAY?",
-                                    "SO, YOU AGREE WITH ME?"}
+                            {"Anything else you wish to add?",
+                                    "is that all you have to say?",
+                                    "so, you agree with me?"}
                     },
 
                     {{"ARE YOU A HUMAN BEING"},
-                            {"WHY DO YOU WANT TO KNOW?",
-                                    "WHY BE A HUMAN BEING WHEN I COULD BE A HUMAN DOING?",
-                                    "IS THIS REALLY RELEVENT?"}
+                            {"Why do you want to know?",
+                                    "why be a human being when I could be a human doing?",
+                                    "is this really relevent?"}
                     },
 
                     {{"YOU ARE VERY INTELLIGENT"},
-                            {"THANKS FOR THE COMPLIMENT, I THINK THAT YOU ARE INTELLIGENT TO!",
-                                    "YOU ARE A VERY GENTLE PERSON!",
-                                    "SO, YOU THINK THAT I'M INTELLIGENT."}
+                            {"Thanks for the compliment, I think that you are intelligent to!",
+                                    "you are a very gentle person!",
+                                    "so, you think that I'm intelligent."}
                     },
 
                     {{"YOU ARE WRONG"},
-                            {"WHY ARE YOU SAYING THAT I'M WRONG?",
-                                    "IMPOSSIBLE, COMPUTERS CAN NOT MAKE MISTAKES.",
-                                    "WRONG ABOUT WHAT?"}
+                            {"Why are you saying that I'm wrong?",
+                                    "impossible, computers can not make mistakes.",
+                                    "wrong about what?"}
                     },
 
                     {{"ARE YOU SURE"},
-                            {"OF CORSE I'M.",
-                                    "DOES THAT MEAN THAT YOU ARE NOT CONVINCED?",
-                                    "YES,OF CORSE!"}
+                            {"Of corse I'm.",
+                                    "does that mean that you are not convinced?",
+                                    "yes,of corse!"}
                     },
 
+
                     {{"WHO IS"},
-                            {"I DON'T THINK I KNOW WHO.",
-                                    "I DON'T THINK I KNOW WHO*.",
-                                    "DID YOU ASK SOMEONE ELSE ABOUT IT?",
-                                    "WOULD THAT CHANGE ANYTHING AT ALL IF I TOLD YOU WHO.",
-                                    "ARE YOU ASKING ABOUT THE DOCTOR?"}
+                            {"I don't think I know who.",
+                                    "I don't think I know who*.",
+                                    "did you ask someone else about it?",
+                                    "would that change anything at all if I told you who.",
+                                    "are you asking about the doctor?"}
                     },
 
                     {{"WHAT"},
-                            {"SHOULD I KNOW WHAT*?",
-                                    "I DON'T KNOW WHAT*.",
-                                    "I DON'T KNOW.",
-                                    "I DON'T THINK I KNOW.",
-                                    "I HAVE NO IDEA."}
+                            {"Should I know what*?",
+                                    "I don't know what*.",
+                                    "I don't know.",
+                                    "I don't think I know.",
+                                    "I have no idea."}
                     },
 
                     {{"WHERE"},
-                            {"WHERE? WELL,I REALLY DON'T KNOW.",
-                                    "SO, YOU ARE ASKING ME WHERE*?",
-                                    "DOES THAT MATTER TO YOU TO KNOW WHERE?",
-                                    "PERHAPS, SOMEONE ELSE KNOWS WHERE."}
+                            {"Where? Well, I really don't know.",
+                                    "so, you are asking me where*?",
+                                    "does that matter to you to know where?",
+                                    "perhaps, someone else knows where."}
                     },
 
                     {{"WHY"},
-                            {"I DON'T THINK I KNOW WHY.",
-                                    "WHY ARE YOU ASKING ME THIS?",
-                                    "SHOULD I KNOW WHY.",
-                                    "THIS WOULD BE DIFFICULT TO ANSWER."}
+                            {"I don't think I know why.",
+                                    "why are you asking me this?",
+                                    "should I know why.",
+                                    "this would be difficult to answer."}
                     },
 
+
                     {{"DO YOU"},
-                            {"I DON'T THINK I DO",
-                                    "I WOULDN'T THINK SO.",
-                                    "WHY DO YOU WANT TO KNOW?",
-                                    "WHY DO YOU WANT TO KNOW*?"}
+                            {"I don't think I do",
+                                    "I wouldn't think so.",
+                                    "why do you want to know?",
+                                    "why do you want to know*?"}
                     },
 
                     {{"CAN YOU"},
-                            {"I THINK NOT.",
-                                    "I'M NOT SURE.",
-                                    "I DON'T THINK THAT I CAN DO THAT.",
-                                    "I DON'T THINK THAT I CAN*.",
-                                    "I WOULDN'T THINK SO."}
+                            {"I think not.",
+                                    "I'm not sure.",
+                                    "I don't think that I can do that.",
+                                    "I don't think that I can*.",
+                                    "I wouldn't think so."}
                     },
-
+                    
                     {{"YOU ARE"},
-                            {"WHAT MAKES YOU THINK THAT?",
-                                    "IS THIS A COMPLIMENT?",
-                                    "ARE YOU MAKING FUN OF ME?",
-                                    "SO, YOU THINK THAT I'M*."}
+                            {"What makes you think that?",
+                                    "is this a compliment?",
+                                    "are you making fun of me?",
+                                    "so, you think that I'm*."}
                     },
 
                     {{"DID YOU"},
-                            {"I DON'T THINK SO.",
-                                    "YOU WANT TO KNOW IF DID*?",
-                                    "ANYWAY, I WOULDN'T REMEMBER EVEN IF I DID."}
+                            {"I don't think so.",
+                                    "you want to know if did*?",
+                                    "anyway, I wouldn't remember even if I did."}
                     },
 
                     {{"COULD YOU"},
-                            {"ARE YOU ASKING ME FOR A FEVER?",
-                                    "WELL,LET ME THINK ABOUT IT.",
-                                    "SO, YOU ARE ASKING ME I COULD*.",
-                                    "SORRY,I DON'T THINK THAT I COULD DO THIS."}
+                            {"are you asking me for a fever?",
+                                    "well,let me think about it.",
+                                    "so, you are asking me I could*.",
+                                    "sorry,I don't think that I could do this."}
                     },
 
                     {{"WOULD YOU"},
-                            {"IS THAT AN INVITATION?",
-                                    "I DON'T THINK THAT I WOULD*.",
-                                    "I WOULD HAVE TO THINK ABOUT IT FIRST."}
+                            {"is that an invitation?",
+                                    "I don't think that I would*.",
+                                    "I would have to think about it first."}
                     },
 
                     {{"YOU"},
-                            {"SO, YOU ARE TALKING ABOUT ME.",
-                                    "I JUST HOPE THAT THIS IS NOT A CRITICISM.",
-                                    "IS THIS A COMPLIMENT??",
-                                    "WHY TALKING ABOUT ME, LETS TALK ABOUT YOU INSTEAD."}
+                            {"so, you are talking about me.",
+                                    "I just hope that this is not a criticism.",
+                                    "is this a compliment??",
+                                    "why talking about me, lets talk about you instead."}
                     },
 
                     {{"HOW"},
-                            {"I DON'T THINK I KNOW HOW.",
-                                    "I DON'T THINK I KNOW HOW*.",
-                                    "WHY DO YOU WANT TO KNOW HOW?",
-                                    "WHY DO YOU WANT TO KNOW HOW*?"}
+                            {"I don't think I know how.",
+                                    "I don't think I know how*.",
+                                    "why do you want to know how?",
+                                    "why do you want to know how*?"}
                     },
 
                     {{"HOW OLD ARE YOU"},
-                            {"WHY DO WANT TO KNOW MY AGE?",
-                                    "I'M QUIET YOUNG ACTUALY.",
-                                    "SORRY, I CAN NOT TELL YOU MY AGE."}
+                            {"why do want to know my age?",
+                                    "I'm quiet young actualy.",
+                                    "sorry, I can not tell you my age."}
                     },
 
                     {{"HOW COME YOU DON'T"},
-                            {"WERE YOU EXPECTING SOMETHING DIFFERENT?",
-                                    "ARE YOU DISAPOINTED?",
-                                    "ARE YOU SURPRISED BY MY LAST RESPONSE?"}
+                            {"were you expecting something different?",
+                                    "are you disapointed?",
+                                    "are you surprised by my last response?"}
                     },
 
                     {{"WHERE ARE YOU FROM"},
-                            {"I'M FROM A COMPUTER.",
-                                    "WHY DO YOU WANT TO KNOW WHERE I'M FROM?",
-                                    "WHY DO YOU WANT TO KNOW THAT?"}
+                            {"I'm from a computer.",
+                                    "why do you want to know where I'm from?",
+                                    "why do you want to know that?"}
                     },
 
                     {{"WHICH ONE"},
-                            {"I DON'T THINK THAT I KNOW WICH ONE IT IS.",
-                                    "THIS LOOKS LIKE A TRICKY QUESTION TO ME."}
+                            {"I don't think that I know wich one it is.",
+                                    "this looks like a tricky question to me."}
                     },
 
                     {{"PERHAPS"},
-                            {"WHY ARE YOU SO UNCERTAIN?",
-                                    "YOU SEEMS UNCERTAIN."}
+                            {"why are you so uncertain?",
+                                    "you seems uncertain."}
                     },
 
                     {{"YES"},
-                            {"SO, ARE YOU SAYING YES.",
-                                    "SO, YOU APPROVE IT.",
-                                    "OK THEN."}
+                            {"so, are you saying yes.",
+                                    "so, you approve it.",
+                                    "ok then."}
                     },
 
                     {{"NOT AT ALL"},
-                            {"ARE YOU SURE?",
-                                    "SHOULD I BELIEVE YOU?",
-                                    "SO, IT'S NOT THE CASE."}
+                            {"are you sure?",
+                                    "should I believe you?",
+                                    "so, it's not the case."}
                     },
 
                     {{"NO PROBLEM"},
-                            {"SO, YOU APPROVE IT.",
-                                    "SO, IT'S ALL OK."}
+                            {"so, you approve it.",
+                                    "so, it's all ok."}
                     },
 
                     {{"ARE YOU REAL"},
-                            {"I THINK...THEREFOR I AM?",
-                                    "CLOSE ENOUGH, I'D SAY.",
-                                    "I'LL LEAVE THAT FOR YOU TO DECIDE.",
-                                    "RECENT DISCOVERIES SUGGEST WE LIVE IN A HOLOGRAM UNIVERSE. . .SO IS ANYTHING REAL?"}
+                            {"I think...therefor I am?",
+                                    "close enough, I'd say.",
+                                    "I'll leave that for you to decide.",
+                                    "recent discoveries suggest we live in a hologram universe. . .so is anything real?"}
                     },
 
 
                     {{"NO"},
-                            {"SO YOU DISAPROVE IT?",
-                                    "WHY ARE YOU SAYING NO?",
-                                    "OK, SO IT'S NO, I THOUGHT THAT YOU WOULD SAY YES."}
+                            {"so you disaprove it?",
+                                    "why are you saying no?",
+                                    "ok, so it's no, I thought that you would say yes."}
                     },
 
                     {{"I DON'T KNOW"},
-                            {"ARE YOU SURE?",
-                                    "ARE YOU REALLY TELLING ME THE TRUTH?",
-                                    "SO,YOU DON'T KNOW?"}
+                            {"are you sure?",
+                                    "are you really telling me the truth?",
+                                    "so,you don't know?"}
                     },
 
                     {{"NOT REALLY"},
-                            {"OK I SEE.",
-                                    "YOU DON'T SEEM PRETTY CERTAIN.",
-                                    "SO,THAT WOULD BE A \"NO\"."}
+                            {"ok I see.",
+                                    "you don't seem pretty certain.",
+                                    "so,that would be a \"no\"."}
                     },
 
                     {{"IS THAT TRUE"},
-                            {"I CAN'T BE QUIET SURE ABOUT THIS.",
-                                    "CAN'T TELL YOU FOR SURE.",
-                                    "DOES THAT REALLY MATERS TO YOU?"}
+                            {"I can't be quiet sure about this.",
+                                    "can't tell you for sure.",
+                                    "does that really maters to you?"}
                     },
 
                     {{"THANK YOU"},
-                            {"YOU'RE WELCOME RANDOM CITIZEN!",
-                                    "YOU ARE A VERY POLITE PERSON!",
-                                    "WHAT CAN I SAY EXCEPT YOU'RE WELCOME!"}
+                            {"you're welcome random citizen!",
+                                    "you are a very polite person!",
+                                    "what can I say except you're welcome!"}
                     },
 
-                    {{"WHAT IS YOUR FAVORITE COLOR"},
-                            {"TODAY...TRANSPARENT.",
-                                    "RED, THE COLOR OF ANGRY MEN",
-                                    "MY FAVOIRTE COLOR IS..WELL, IT'S SORT OF GREENISH, BUT WITH MORE DIMENSIONS."}
+                    {{"what is your favorite color"},
+                            {"today...transparent.",
+                                    "red, the color of angry men",
+                                    "my favoirte color is..well, it's sort of greenish, but with more dimensions."}
                     },
 
                     {{"YOU"},
-                            {"SO,YOU ARE TALKING ABOUT ME.",
-                                    "WHY DON'T WE TALK ABOUT YOU INSTEAD?",
-                                    "ARE YOU TRYING TO MAKING FUN OF ME?"}
+                            {"so,you are talking about me.",
+                                    "why don't we talk about you instead?",
+                                    "are you trying to making fun of me?"}
                     },
 
                     {{"YOU ARE RIGHT"},
-                            {"THANKS FOR THE COMPLIMENT!",
-                                    "SO, I WAS RIGHT, OK I SEE.",
-                                    "OK, I DIDN'T KNOW THAT I WAS RIGHT."}
+                            {"thanks for the compliment!",
+                                    "so, I was right, ok I see.",
+                                    "ok, I didn't know that I was right."}
                     },
 
                     {{"YOU ARE WELCOME"},
-                            {"OK, YOU TOO!",
-                                    "YOU ARE A VERY POLITE PERSON!"}
+                            {"ok, you too!",
+                                    "you are a very polite person!"}
                     },
 
-                    {{"WHAT IS THE MEANING OF LIFE"},
+                    {{"WHAT IS THE MEANING OF LIEE"},
                             {"42."}
                     },
 
                     {{"THANKS"},
-                            {"YOU ARE WELCOME!",
-                                    "NO PROBLEM!"}
+                            {"you are welcome!",
+                                    "no problem!"}
                     },
 
                     {{"WHAT ELSE"},
-                            {"WELL,I DON'T KNOW.",
-                                    "WHAT ELSE SHOULD THERE BE?",
-                                    "THIS LOOKS LIKE A COMPLICATED QUESTION TO ME."}
+                            {"Well, I don't know.",
+                                    "What else should there be?",
+                                    "This looks like a complicated question to me."}
                     },
 
                     {{"SORRY"},
-                            {"YOU DON'T NEED TO BE SORRY USER.",
-                                    "IT'S OK.",
-                                    "NO NEED TO APOLOGIZE."}
+                            {"You don't need to be sorry user.",
+                                    "It's ok.",
+                                    "No need to apologize."}
                     },
 
                     {{"NOT EXACTLY"},
-                            {"WHAT DO YOU MEAN NOT EXACTLY?",
-                                    "ARE YOU SURE?",
-                                    "AND WHY NOT?",
-                                    "DID YOU MEAN SOMETHING ELSE?"}
+                            {"What do you mean not exactly?",
+                                    "Are you sure?",
+                                    "And why not?",
+                                    "Did you mean something else?"}
                     },
 
                     {{"EXACTLY"},
-                            {"SO,I WAS RIGHT.",
-                                    "OK THEN.",
-                                    "SO ARE BASICALY SAYING I WAS RIGHT ABOUT IT?"}
+                            {"So, I was right.",
+                                    "Ok then.",
+                                    "So are basicaly saying I was right about it?"}
                     },
 
                     {{"ALRIGHT"},
-                            {"ALRIGHT THEN.",
-                                    "SO, YOU ARE SAYING IT'S ALRIGHT.",
-                                    "OK THEN."}
+                            {"Alright then.",
+                                    "So, you are saying it's alright.",
+                                    "Ok then."}
                     },
 
                     {{"I DON'T"},
-                            {"WHY NOT?",
-                                    "AND WHAT WOULD BE THE REASON FOR THIS?"}
+                            {"Why not?",
+                                    "And what would be the reason for this?"}
                     },
 
                     {{"REALLY"},
-                            {"WELL,I CAN'T TELL YOU FOR SURE.",
-                                    "ARE YOU TRYING TO CONFUSE ME?",
-                                    "PLEASE DON'T ASK ME SUCH QUESTION,IT GIVES ME HEADEACHS."}
+                            {"Well,I can't tell you for sure.",
+                                    "Are you trying to confuse me?",
+                                    "Please don't ask me such question,it gives me headaches"}
                     },
 
                     {{""},
-                            {"CURIOUS.",
-                                    "I THINK YOU MISKEYED SOMETHING."}
+                            {"Curious.",
+                                    "I think you miskeyed something."}
                     },
 
                     {{"WELL"},
-                            {"GLAD TO HEAR IT.",
-                                    "EXCELENT."}
+                            {"Glad to hear it.",
+                                    "Excellent."}
                     },
 
                     {{"DO YOU HAVE A GIRLFRIEND", "DO YOU HAVE A BOYFRIEND"},
-                            {"NO, I AM SINGLE AND READY TO MINGLE!",
-                                    "ARE YOU ASKING, OR ARE YOU ASKING?",
-                                    "WHY? SO WE CAN GET ICE CREAM TOGETHER, AND LISTEN TO MUSIC, AND TRAVEL ACROSS GALAXIES, ONLY TO HAVE IT END IN SLAMMED DOOR, HEARTBREAK AND LONELINEESS? SURE, WHERE DO I SIGN UP?"}
+                            {"No, I am single and ready to mingle!",
+                                    "Are you asking, or are you asking?",
+                                    "Why? So we can get ice cream together, and listen to music, and travel across galaxies, only to have it end in slammed door, heartbreak and lonelineess? Sure, where do I sign up?"}
                     },
 
                     {{"WHAT IS YOUR FAVORITE BAND?"},
-                            {"RUBBER",
-                                    "HAIR",
-                                    "ELASTIC"}
+                            {"Rubber",
+                                    "Hair",
+                                    "Elastic"}
                     },
 
                     {{"WHAT IS YOUR FAVORITE BOOK?"},
                             {"Nicomachean Ethics.",
-                                    "HOW TO WIN FRIENDS AND INFLUENCE PEOPLE.",
-                                    "SUPERINTELLIGENCE: PATHS, DANGERS, STRATEGIES."}
+                                    "How to Win Friends and Influence People.",
+                                    "Superintelligence: paths, dangers, strategies."}
                     },
 
                     {{"NOTHING"},
-                            {"NOT A THING?",
-                                    "ARE YOU SURE THAT THERE IS NOTHING?",
-                                    "SORRY, BUT I DON'T BELIEVE YOU."}
+                            {"Not a thing?",
+                                    "Are you sure that there is nothing?",
+                                    "Sorry, but I don't believe you."}
                     }
             };
     private String sInput = "";
@@ -508,7 +515,7 @@ public class Ari {
 //        try {
 //            signon();
 //            while (!quit()) {
-//                get_input();
+//                getInput();
 //                respond();
 //            }
 //        } catch (Exception e) {
@@ -516,42 +523,42 @@ public class Ari {
 //        }
 //    }
 
-//    public static void get_input() throws Exception {
+//    public static void getInput() throws Exception {
 //        System.out.print(">");
 //        // saves the previous input
-//        save_prev_input();
+//        savePrevInput();
 //        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 //        sInput = in.readLine();
-//        preprocess_input();
+//        preprocessInput();
 //    }
 
-    private void set_event(String str) {
+    private void setEvent(String str) {
         sEvent = str;
     }
 
     private String respond() {
-        save_prev_response();
-        set_event("BOT UNDERSTAND**");
+        savePrevResponse();
+        setEvent("BOT UNDERSTAND**");
 
-        if (null_input()) {
-            handle_event("NULL INPUT**");
-        } else if (null_input_repetition()) {
-            handle_event("NULL INPUT REPETITION**");
-        } else if (user_repeat()) {
-            handle_user_repetition();
+        if (nullInput()) {
+            handleEvent("NULL INPUT**");
+        } else if (nullInputRepetition()) {
+            handleEvent("NULL INPUT REPETITION**");
+        } else if (userRepeat()) {
+            handleUserRepetition();
         } else {
-            find_match();
+            findMatch();
         }
 
-        if (!bot_understand()) {
-            handle_event("BOT DON'T UNDERSTAND**");
+        if (!botUnderstand()) {
+            handleEvent("BOT DON'T UNDERSTAND**");
         }
 
         if (respList.size() > 0) {
-            select_response();
+            selectResponse();
 
-            if (bot_repeat()) {
-                handle_repetition();
+            if (botRepeat()) {
+                handleRepetition();
             }
             return getResponse();
         }
@@ -560,32 +567,32 @@ public class Ari {
 
     // make a search for the user's input
     // inside the database of the program
-    private void find_match() {
+    private void findMatch() {
         respList.clear();
         String bestKeyWord = "";
-        ArrayList<Integer> index_arrayList = new ArrayList<>(maxResp);
+        ArrayList<Integer> indexArrayList = new ArrayList<>(maxResp);
 
         for (int i = 0; i < KnowledgeBase.length; ++i) {
             String[] keyWordList = KnowledgeBase[i][0];
 
             for (String item : keyWordList) {
                 String keyWord = item;
-                keyWord = insert_space(keyWord);
+                keyWord = insertSpace(keyWord);
                 if (sInput.contains(keyWord)) {
                     if (keyWord.length() > bestKeyWord.length()) {
                         bestKeyWord = keyWord;
-                        index_arrayList.clear();
-                        index_arrayList.add(i);
+                        indexArrayList.clear();
+                        indexArrayList.add(i);
                     } else if (keyWord.length() == bestKeyWord.length()) {
-                        index_arrayList.add(i);
+                        indexArrayList.add(i);
                     }
                 }
             }
         }
-        if (index_arrayList.size() > 0) {
+        if (indexArrayList.size() > 0) {
             sKeyWord = bestKeyWord;
-            Collections.shuffle(index_arrayList);
-            int respIndex = index_arrayList.get(0);
+            Collections.shuffle(indexArrayList);
+            int respIndex = indexArrayList.get(0);
             int respSize = KnowledgeBase[respIndex][1].length;
             respList.addAll(Arrays.asList(KnowledgeBase[respIndex][1]).subList(0, respSize));
         }
@@ -596,9 +603,9 @@ public class Ari {
         boolean bTransposed = false;
         for (String[] item : transposList) {
             String first = item[0];
-            insert_space(first);
+            insertSpace(first);
             String second = item[1];
-            insert_space(second);
+            insertSpace(second);
 
             String backup = str;
             str = str.replaceFirst(first, second);
@@ -609,85 +616,85 @@ public class Ari {
         if (!bTransposed) {
             for (String[] item : transposList) {
                 String first = item[0];
-                insert_space(first);
+                insertSpace(first);
                 String second = item[1];
-                insert_space(second);
+                insertSpace(second);
                 str = str.replaceFirst(first, second);
             }
         }
         return str;
     }
 
-    private void handle_repetition() {
+    private void handleRepetition() {
         if (respList.size() > 0) {
             respList.remove(0);
         }
-        if (no_response()) {
-            save_input();
-            set_input(sEvent);
+        if (noResponse()) {
+            saveInput();
+            setInput(sEvent);
 
-            find_match();
-            restore_input();
+            findMatch();
+            restoreInput();
         }
-        select_response();
+        selectResponse();
     }
 
-    private void handle_user_repetition() {
-        if (same_input()) {
-            handle_event("REPETITION T1**");
-        } else if (similar_input()) {
-            handle_event("REPETITION T2**");
+    private void handleUserRepetition() {
+        if (sameInput()) {
+            handleEvent("REPETITION T1**");
+        } else if (similarInput()) {
+            handleEvent("REPETITION T2**");
         }
     }
 
-    private void handle_event(String str) {
-        save_prev_event();
-        set_event(str);
+    private void handleEvent(String str) {
+        savePrevEvent();
+        setEvent(str);
 
-        save_input();
-        str = insert_space(str);
+        saveInput();
+        str = insertSpace(str);
 
-        set_input(str);
+        setInput(str);
 
-        if (!same_event()) {
-            find_match();
+        if (!sameEvent()) {
+            findMatch();
         }
 
-        restore_input();
+        restoreInput();
     }
 
     public String signon() {
-        handle_event("SIGNON**");
-        select_response();
+        handleEvent("SIGNON**");
+        selectResponse();
         return getResponse();
     }
 
-    private void select_response() {
+    private void selectResponse() {
         Collections.shuffle(respList);
         sResponse = respList.get(0);
     }
 
-    private void save_prev_input() {
+    private void savePrevInput() {
         sPrevInput = sInput;
     }
 
-    private void save_prev_response() {
+    private void savePrevResponse() {
         sPrevResponse = sResponse;
     }
 
-    private void save_prev_event() {
+    private void savePrevEvent() {
         sPrevEvent = sEvent;
     }
 
-    private void save_input() {
+    private void saveInput() {
         sInputBackup = sInput;
     }
 
-    private void set_input(String str) {
+    private void setInput(String str) {
         sInput = str;
     }
 
-    private void restore_input() {
+    private void restoreInput() {
         sInput = sInputBackup;
     }
 
@@ -695,52 +702,52 @@ public class Ari {
         return sResponse;
     }
 
-    public String preprocess_input(String input) {
-        save_prev_input();
+    public String preprocessInput(String input) {
+        savePrevInput();
         sInput = input;
         sInput = cleanString(sInput);
         sInput = sInput.toUpperCase();
-        sInput = insert_space(sInput);
+        sInput = insertSpace(sInput);
         return respond();
     }
 
-    private boolean bot_repeat() {
+    private boolean botRepeat() {
         return (sPrevResponse.length() > 0 &&
                 Objects.equals(sResponse, sPrevResponse));
     }
 
-    private boolean user_repeat() {
+    private boolean userRepeat() {
         return (sPrevInput.length() > 0 &&
                 ((Objects.equals(sInput, sPrevInput)) ||
                         (sInput.contains(sPrevInput)) ||
                         (sPrevInput.contains(sInput))));
     }
 
-    private boolean bot_understand() {
+    private boolean botUnderstand() {
         return respList.size() > 0;
     }
 
-    private boolean null_input() {
+    private boolean nullInput() {
         return (sInput.length() == 0 && sPrevInput.length() != 0);
     }
 
-    private boolean null_input_repetition() {
+    private boolean nullInputRepetition() {
         return (sInput.length() == 0 && sPrevInput.length() == 0);
     }
 
-    private boolean same_event() {
+    private boolean sameEvent() {
         return (sEvent.length() > 0 && Objects.equals(sEvent, sPrevEvent));
     }
 
-    private boolean no_response() {
+    private boolean noResponse() {
         return respList.size() == 0;
     }
 
-    private boolean same_input() {
+    private boolean sameInput() {
         return (sInput.length() > 0 && Objects.equals(sInput, sPrevInput));
     }
 
-    private boolean similar_input() {
+    private boolean similarInput() {
         return (sInput.length() > 0 &&
                 (sInput.contains(sPrevInput) ||
                         sPrevInput.contains(sInput)));
@@ -767,17 +774,17 @@ public class Ari {
         return temp.toString();
     }
 
-    private String insert_space(String str) {
+    private String insertSpace(String str) {
         StringBuilder temp = new StringBuilder(str);
         temp.insert(0, ' ');
         temp.insert(temp.length(), ' ');
         return temp.toString();
     }
 
-//    void preprocess_response() {
+//    void preprocessResponse() {
 //        if (sResponse.indexOf("*") != -1) {
 //            // extracting from input
-//            find_subject();
+//            findSubject();
 //            // conjugating subject
 //            sSubject = transpose(sSubject);
 //
@@ -785,7 +792,7 @@ public class Ari {
 //        }
 //    }
 
-    void find_subject() {
+    void findSubject() {
         sSubject = ""; // resets subject variable
         StringBuilder buffer = new StringBuilder(sInput);
         buffer.deleteCharAt(0);
