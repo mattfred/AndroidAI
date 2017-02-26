@@ -39,7 +39,7 @@ public class Ari {
 
                     {{"I HATE"},
                             {"Why do you hate it?",
-                                    "Why do you hate*?",
+                                    "Why do you hate?",
                                     "Hate leads to suffering.",
                                     "There must a good reason for you to hate it.",
                                     "Hatered is not a good thing but it could be justified when it is something bad."}
@@ -53,16 +53,16 @@ public class Ari {
                     },
 
                     {{"I MEAN"},
-                            {"So, you mean*.",
+                            {"So, you mean.",
                                     "So, that's what you mean.",
                                     "I think that I didn't catch it the first time.",
                                     "Oh, I didn't know meant that."}
                     },
 
                     {{"I DIDN'T MEAN"},
-                            {"ok, you didn't mean*.",
-                                    "ok, what did you mean then?",
-                                    "so I guess that I missundestood."}
+                            {"Ok, you didn't mean.",
+                                    "Ok, what did you mean then?",
+                                    "So I guess that I missundestood."}
                     },
 
                     {{"I GUESS"},
@@ -75,44 +75,44 @@ public class Ari {
 
                     {{"I'M DOING FINE", "I'M DOING OK", "I'M DOING WELL"},
                             {"I'm glad to hear it!",
-                                    "so, you are in good shape."}
+                                    "So, you are in good shape."}
 
                     },
 
                     {{"CAN YOU THINK", "ARE YOU ABLE TO THINK", "ARE YOU CAPABLE OF THINKING"},
                             {"Yes of course I can.",
-                                    "are you asking me if possess the capacity of thinking?",
-                                    "why, of course."},
+                                    "Are you asking me if possess the capacity of thinking?",
+                                    "Why, of course."},
                     },
 
                     {{"CAN YOU THINK OF"},
                             {"You mean like imagining something.",
                                     "I don't know if I can do that.",
-                                    "why do you want me think of it?"}
+                                    "Why do you want me think of it?"}
                     },
 
                     {{"HOW ARE YOU", "HOW DO YOU DO"},
                             {"I'm doing fine!",
                                     "I'm doing well and you?",
-                                    "why do you want to know how am I doing?"}
+                                    "Why do you want to know how am I doing?"}
                     },
 
                     {{"WHO ARE YOU"},
                             {"I'm ari.",
                                     "I think that you know who I am.",
-                                    "why are you asking?"}
+                                    "Why are you asking?"}
                     },
 
                     {{"ARE YOU INTELLIGENT"},
                             {"Yes, of course.",
-                                    "what do you think?",
-                                    "actually I’m very intelligent!"}
+                                    "What do you think?",
+                                    "Actually I’m very intelligent!"}
                     },
 
                     {{"MY NAME IS", "YOU CAN CALL ME"},
                             {"So, that's your name.",
-                                    "thanks for telling me your name user!",
-                                    "who gave you that name?"}
+                                    "Thanks for telling me your name user!",
+                                    "Who gave you that name?"}
                     },
 
                     {{"SIGNON**"},
@@ -124,18 +124,18 @@ public class Ari {
 
                     {{"REPETITION T1**"},
                             {"You are repeating yourself.",
-                                    "please stop repeating yourself.",
-                                    "this conversation is geting boring.",
-                                    "don't you have any thing else to say?"}
+                                    "Please stop repeating yourself.",
+                                    "This conversation is geting boring.",
+                                    "Don't you have any thing else to say?"}
 
                     },
 
                     {{"REPETITION T2**"},
                             {"You've already said that.",
                                     "I think that you've just said the same thing before.",
-                                    "didn't you already say that?",
+                                    "Didn't you already say that?",
                                     "I'm geting the impression that you are repeating the same thing.",
-                                    "you should join a tautology club...it would make these repetiions more interesting."}
+                                    "You should join a tautology club...it would make these repetiions more interesting."}
                     },
 
                     {{"BOT DON'T UNDERSTAND**"},
@@ -163,58 +163,58 @@ public class Ari {
 
                     {{"BYE", "GOODBYE"},
                             {"It was nice talking to you user, see you next time!",
-                                    "bye user!",
-                                    "ok, bye!"}
+                                    "Bye user!",
+                                    "Ok, bye!"}
                     },
 
                     {{"OK"},
                             {"Does that mean that you are agree with me?",
-                                    "so you understand what I'm saying.",
-                                    "ok then."},
+                                    "So you understand what I'm saying.",
+                                    "Ok then."},
                     },
 
                     {{"OK THEN"},
                             {"Anything else you wish to add?",
-                                    "is that all you have to say?",
-                                    "so, you agree with me?"}
+                                    "Is that all you have to say?",
+                                    "So, you agree with me?"}
                     },
 
                     {{"ARE YOU A HUMAN BEING"},
                             {"Why do you want to know?",
-                                    "why be a human being when I could be a human doing?",
-                                    "is this really relevent?"}
+                                    "Why be a human being when I could be a human doing?",
+                                    "Is this really relevent?"}
                     },
 
                     {{"YOU ARE VERY INTELLIGENT"},
                             {"Thanks for the compliment, I think that you are intelligent to!",
-                                    "you are a very gentle person!",
-                                    "so, you think that I'm intelligent."}
+                                    "You are a very gentle person!",
+                                    "So, you think that I'm intelligent."}
                     },
 
                     {{"YOU ARE WRONG"},
                             {"Why are you saying that I'm wrong?",
-                                    "impossible, computers can not make mistakes.",
-                                    "wrong about what?"}
+                                    "Impossible, computers can not make mistakes.",
+                                    "Wrong about what?"}
                     },
 
                     {{"ARE YOU SURE"},
                             {"Of corse I'm.",
-                                    "does that mean that you are not convinced?",
-                                    "yes,of corse!"}
+                                    "Does that mean that you are not convinced?",
+                                    "Yes,of course!"}
                     },
 
 
                     {{"WHO IS"},
                             {"I don't think I know who.",
-                                    "I don't think I know who*.",
-                                    "did you ask someone else about it?",
-                                    "would that change anything at all if I told you who.",
-                                    "are you asking about the doctor?"}
+                                    "I don't think I know who.",
+                                    "Did you ask someone else about it?",
+                                    "Would that change anything at all if I told you who.",
+                                    "Are you asking about the doctor?"}
                     },
 
                     {{"WHAT"},
-                            {"Should I know what*?",
-                                    "I don't know what*.",
+                            {"Should I know what?",
+                                    "I don't know what.",
                                     "I don't know.",
                                     "I don't think I know.",
                                     "I have no idea."}
@@ -222,178 +222,178 @@ public class Ari {
 
                     {{"WHERE"},
                             {"Where? Well, I really don't know.",
-                                    "so, you are asking me where*?",
-                                    "does that matter to you to know where?",
-                                    "perhaps, someone else knows where."}
+                                    "So, you are asking me where?",
+                                    "Does that matter to you to know where?",
+                                    "Perhaps, someone else knows where."}
                     },
 
                     {{"WHY"},
                             {"I don't think I know why.",
-                                    "why are you asking me this?",
-                                    "should I know why.",
-                                    "this would be difficult to answer."}
+                                    "Why are you asking me this?",
+                                    "Should I know why.",
+                                    "This would be difficult to answer."}
                     },
 
 
                     {{"DO YOU"},
                             {"I don't think I do",
                                     "I wouldn't think so.",
-                                    "why do you want to know?",
-                                    "why do you want to know*?"}
+                                    "Why do you want to know?",
+                                    "Why do you want to know?"}
                     },
 
                     {{"CAN YOU"},
                             {"I think not.",
                                     "I'm not sure.",
                                     "I don't think that I can do that.",
-                                    "I don't think that I can*.",
+                                    "I don't think that I can.",
                                     "I wouldn't think so."}
                     },
                     
                     {{"YOU ARE"},
                             {"What makes you think that?",
-                                    "is this a compliment?",
-                                    "are you making fun of me?",
-                                    "so, you think that I'm*."}
+                                    "Is this a compliment?",
+                                    "Are you making fun of me?",
+                                    "So, you think that I'm."}
                     },
 
                     {{"DID YOU"},
                             {"I don't think so.",
-                                    "you want to know if did*?",
-                                    "anyway, I wouldn't remember even if I did."}
+                                    "You want to know if did?",
+                                    "Anyway, I wouldn't remember even if I did."}
                     },
 
                     {{"COULD YOU"},
-                            {"are you asking me for a fever?",
-                                    "well,let me think about it.",
-                                    "so, you are asking me I could*.",
-                                    "sorry,I don't think that I could do this."}
+                            {"Are you asking me for a fever?",
+                                    "Well,let me think about it.",
+                                    "So, you are asking me I could.",
+                                    "Sorry,I don't think that I could do this."}
                     },
 
                     {{"WOULD YOU"},
-                            {"is that an invitation?",
-                                    "I don't think that I would*.",
+                            {"Is that an invitation?",
+                                    "I don't think that I would.",
                                     "I would have to think about it first."}
                     },
 
                     {{"YOU"},
-                            {"so, you are talking about me.",
+                            {"So, you are talking about me.",
                                     "I just hope that this is not a criticism.",
-                                    "is this a compliment??",
-                                    "why talking about me, lets talk about you instead."}
+                                    "Is this a compliment??",
+                                    "Why talking about me, lets talk about you instead."}
                     },
 
                     {{"HOW"},
                             {"I don't think I know how.",
-                                    "I don't think I know how*.",
-                                    "why do you want to know how?",
-                                    "why do you want to know how*?"}
+                                    "I don't think I know how.",
+                                    "Why do you want to know how?",
+                                    "Why do you want to know how?"}
                     },
 
                     {{"HOW OLD ARE YOU"},
                             {"why do want to know my age?",
                                     "I'm quiet young actualy.",
-                                    "sorry, I can not tell you my age."}
+                                    "Sorry, I can not tell you my age."}
                     },
 
                     {{"HOW COME YOU DON'T"},
                             {"were you expecting something different?",
-                                    "are you disapointed?",
-                                    "are you surprised by my last response?"}
+                                    "Are you disapointed?",
+                                    "Are you surprised by my last response?"}
                     },
 
                     {{"WHERE ARE YOU FROM"},
                             {"I'm from a computer.",
-                                    "why do you want to know where I'm from?",
-                                    "why do you want to know that?"}
+                                    "Why do you want to know where I'm from?",
+                                    "Why do you want to know that?"}
                     },
 
                     {{"WHICH ONE"},
                             {"I don't think that I know wich one it is.",
-                                    "this looks like a tricky question to me."}
+                                    "This looks like a tricky question to me."}
                     },
 
                     {{"PERHAPS"},
                             {"why are you so uncertain?",
-                                    "you seems uncertain."}
+                                    "You seem uncertain."}
                     },
 
                     {{"YES"},
-                            {"so, are you saying yes.",
-                                    "so, you approve it.",
-                                    "ok then."}
+                            {"So, are you saying yes.",
+                                    "So, you approve it.",
+                                    "Ok then."}
                     },
 
                     {{"NOT AT ALL"},
-                            {"are you sure?",
-                                    "should I believe you?",
-                                    "so, it's not the case."}
+                            {"Are you sure?",
+                                    "Should I believe you?",
+                                    "So, it's not the case."}
                     },
 
                     {{"NO PROBLEM"},
-                            {"so, you approve it.",
-                                    "so, it's all ok."}
+                            {"So, you approve it.",
+                                    "So, it's all ok."}
                     },
 
                     {{"ARE YOU REAL"},
                             {"I think...therefor I am?",
-                                    "close enough, I'd say.",
+                                    "Close enough, I'd say.",
                                     "I'll leave that for you to decide.",
-                                    "recent discoveries suggest we live in a hologram universe. . .so is anything real?"}
+                                    "Recent discoveries suggest we live in a hologram universe. . .so is anything real?"}
                     },
 
 
                     {{"NO"},
-                            {"so you disaprove it?",
-                                    "why are you saying no?",
-                                    "ok, so it's no, I thought that you would say yes."}
+                            {"So you disaprove it?",
+                                    "Why are you saying no?",
+                                    "Ok, so it's no, I thought that you would say yes."}
                     },
 
                     {{"I DON'T KNOW"},
-                            {"are you sure?",
-                                    "are you really telling me the truth?",
-                                    "so,you don't know?"}
+                            {"Are you sure?",
+                                    "Are you really telling me the truth?",
+                                    "So,you don't know?"}
                     },
 
                     {{"NOT REALLY"},
-                            {"ok I see.",
-                                    "you don't seem pretty certain.",
-                                    "so,that would be a \"no\"."}
+                            {"Ok I see.",
+                                    "You don't seem pretty certain.",
+                                    "So,that would be a \"no\"."}
                     },
 
                     {{"IS THAT TRUE"},
                             {"I can't be quiet sure about this.",
-                                    "can't tell you for sure.",
-                                    "does that really maters to you?"}
+                                    "Can't tell you for sure.",
+                                    "Does that really maters to you?"}
                     },
 
                     {{"THANK YOU"},
-                            {"you're welcome random citizen!",
-                                    "you are a very polite person!",
-                                    "what can I say except you're welcome!"}
+                            {"You're welcome random citizen!",
+                                    "You are a very polite person!",
+                                    "What can I say, except you're welcome!"}
                     },
 
                     {{"what is your favorite color"},
-                            {"today...transparent.",
-                                    "red, the color of angry men",
-                                    "my favoirte color is..well, it's sort of greenish, but with more dimensions."}
+                            {"Today...transparent.",
+                                    "Red, the color of angry men",
+                                    "My favoirte color is..well, it's sort of greenish, but with more dimensions."}
                     },
 
                     {{"YOU"},
-                            {"so,you are talking about me.",
-                                    "why don't we talk about you instead?",
-                                    "are you trying to making fun of me?"}
+                            {"So,you are talking about me.",
+                                    "Why don't we talk about you instead?",
+                                    "Are you trying to making fun of me?"}
                     },
 
                     {{"YOU ARE RIGHT"},
-                            {"thanks for the compliment!",
-                                    "so, I was right, ok I see.",
-                                    "ok, I didn't know that I was right."}
+                            {"Thanks for the compliment!",
+                                    "So, I was right, ok I see.",
+                                    "Ok, I didn't know that I was right."}
                     },
 
                     {{"YOU ARE WELCOME"},
-                            {"ok, you too!",
-                                    "you are a very polite person!"}
+                            {"Ok, you too!",
+                                    "You are a very polite person!"}
                     },
 
                     {{"WHAT IS THE MEANING OF LIEE"},
@@ -401,8 +401,8 @@ public class Ari {
                     },
 
                     {{"THANKS"},
-                            {"you are welcome!",
-                                    "no problem!"}
+                            {"You are welcome!",
+                                    "No problem!"}
                     },
 
                     {{"WHAT ELSE"},
