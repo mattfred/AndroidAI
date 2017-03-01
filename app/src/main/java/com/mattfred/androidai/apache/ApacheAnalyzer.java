@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.Nullable;
 
-import opennlp.tools.parser.Parse;
 import opennlp.tools.util.Span;
 import timber.log.Timber;
 
@@ -27,31 +26,23 @@ public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
 
         String text = strings[0];
 
-        Parse[] parses = NLP.getParse(context, text);
-        StringBuffer sb = new StringBuffer();
-        if (parses != null) {
-            for (Parse parse : parses) {
-                parse.show(sb);
-                Timber.e(sb.toString());
-            }
-        }
+//        Parse[] parses = NLP.getParse(context, text);
+//        StringBuffer sb = new StringBuffer();
+//        if (parses != null) {
+//            for (Parse parse : parses) {
+//                parse.show(sb);
+//            }
+//        }
 
         // get tokens
         String[] results = NLP.getTokens(context, text);
-        if (results != null) {
-            for (String string : results) {
-                Timber.d(string);
-            }
-        } else {
-            Timber.e("results is null");
-        }
 
-        String[] partsOfSpeech = NLP.getPartsOfSpeech(context, results);
-        if (partsOfSpeech != null) {
-            for (String string : partsOfSpeech) {
-                Timber.e(string);
-            }
-        }
+//        String[] partsOfSpeech = NLP.getPartsOfSpeech(context, results);
+//        if (partsOfSpeech != null) {
+//            for (String string : partsOfSpeech) {
+//                Timber.e(string);
+//            }
+//        }
 
         Span[] names = NLP.getNames(context, results);
         if (names != null && names.length > 0) {
@@ -66,7 +57,7 @@ public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
                             fullName += results[i] + " ";
                         }
                     }
-                    return "Found a person name: " + fullName;
+                    return fullName;
                 }
             }
         } else {

@@ -1,6 +1,6 @@
 package com.mattfred.androidai.controllers;
 
-import android.util.Log;
+import android.content.Context;
 
 import com.mattfred.androidai.ai.Ari;
 import com.mattfred.androidai.apache.ApacheAnalyzer;
@@ -9,12 +9,14 @@ import com.mattfred.androidai.models.Tone;
 import com.mattfred.androidai.models.ToneDetails;
 import com.mattfred.androidai.models.WatsonResponse;
 import com.mattfred.androidai.models.WatsonText;
+import com.mattfred.androidai.utils.Preferences;
 import com.mattfred.androidai.watson.WatsonInterface;
 import com.mattfred.androidai.watson.WatsonService;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import timber.log.Timber;
 
 /**
  * Main Activity Controller
@@ -22,21 +24,24 @@ import retrofit2.Response;
 
 public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
-    private static final String TAG = "M-A-Controller";
-
     private AIResponse listener;
     private Ari ari;
+    private String userName;
 
     public MainActivityController(AIResponse listener) {
         this.listener = listener;
         this.ari = new Ari();
-        onResults(ari.signon());
+        userName = Preferences.getName((Context) listener);
+        onResults(ari.signon(!userName.equals("")));
     }
 
     public void analyzeText(String text) {
-//
-//        ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
-//        apacheAnalyzer.execute(text);
+        if (userName.equals("")) {
+            ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
+            apacheAnalyzer.execute(text);
+        } else {
+            tryAri(text);
+        }
 
         WatsonText watsonText = new WatsonText(text);
         WatsonInterface watsonInterface = WatsonService.getWatsonService();
@@ -54,13 +59,13 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
         });
     }
 
-    public void tryAri(String text) {
+    private void tryAri(String text) {
         if (listener != null) listener.sendResponse(ari.preprocessInput(text));
     }
 
     private void analyzeResults(DocumentTone documentTone) {
 
-        Log.e(TAG, documentTone.toString());
+        Timber.d(documentTone.toString());
 
         for (Tone tone : documentTone.getTone_categories()) {
             if (tone.getCategory_id().equalsIgnoreCase("emotion_tone")) {
@@ -91,7 +96,6 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
                             break;
                     }
                 }
-                Log.e(TAG, String.format("Alpha: %d, Red: %d, Green: %d, Blue: %d", alpha, red, green, blue));
                 if (red == 150 && blue == 150 && green == 150 && joy < 60) {
                     if (listener != null) listener.onWatsonResults(255, 255, 255); // white
                 } else if (joy > 60) {
@@ -111,12 +115,20 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
     @Override
     public void onResults(String response) {
-        if (listener != null) listener.sendResponse(response);
+        if (listener != null)
+            if (userName.equals("")) {
+                if (!response.equals("")) {
+                    userName = response;
+                    Preferences.saveName((Context) listener, response);
+                    listener.sendResponse("Hello, " + response);
+                }
+            } else {
+                listener.sendResponse(response);
+            }
     }
 
     public interface AIResponse {
         void onWatsonResults(int red, int green, int blue);
-
         void sendResponse(String text);
     }
 }

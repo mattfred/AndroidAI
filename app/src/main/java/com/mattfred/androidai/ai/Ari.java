@@ -14,7 +14,6 @@ public class Ari {
                             {"My name is Ari.",
                                     "This man has the honor of being called Ari."}
                     },
-                    /**IF BOT ASKS "WHAT IS YOUR NAME" NEED TO WRITE CODE TO TAKE IN NAME AND SAVE IT FOR USE*/
 
                     {{"HI", "HELLO"},
                             {"Hi there!",
@@ -97,7 +96,7 @@ public class Ari {
                                     "Why do you want to know how am I doing?"}
                     },
 
-                    {{"WHO ARE YOU"},
+                    {{"WHO ARE YOU", "WHAT IS YOUR NAME"},
                             {"I'm ari.",
                                     "I think that you know who I am.",
                                     "Why are you asking?"}
@@ -111,13 +110,12 @@ public class Ari {
 
                     {{"MY NAME IS", "YOU CAN CALL ME"},
                             {"So, that's your name.",
-                                    "Thanks for telling me your name user!",
+                                    "Thanks for telling me your name!",
                                     "Who gave you that name?"}
                     },
 
                     {{"SIGNON**"},
-                            {"Hello, what is your name?",
-                                    "Hello, how are you doing today?",
+                            {"Hello, how are you doing today?",
                                     "Hi, what can I do for you?",
                                     "You are now chating with ari, anything you want to discuss?"}
                     },
@@ -125,7 +123,7 @@ public class Ari {
                     {{"REPETITION T1**"},
                             {"You are repeating yourself.",
                                     "Please stop repeating yourself.",
-                                    "This conversation is geting boring.",
+                                    "This conversation is getting boring.",
                                     "Don't you have any thing else to say?"}
 
                     },
@@ -663,9 +661,13 @@ public class Ari {
         restoreInput();
     }
 
-    public String signon() {
-        handleEvent("SIGNON**");
-        selectResponse();
+    public String signon(boolean gotName) {
+        if (gotName) {
+            handleEvent("SIGNON**");
+            selectResponse();
+        } else {
+            sResponse = "Hello. My name is ari. It is nice to meet you. What is your name?";
+        }
         return getResponse();
     }
 

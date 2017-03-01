@@ -81,8 +81,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
                     controller.analyzeText(message.getContent());
                 }
             }).start();
-
-            controller.tryAri(message.getContent());
         }
 
     }
