@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
 
     private void addMessage(final Message message) {
         adapter.addMessage(message);
-        messageArea.scrollToPosition(adapter.getItemCount() - 1);
         input.setText("");
 
         if (message.isUser()) {
@@ -82,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
                 }
             }).start();
         }
+        messageArea.scrollToPosition(adapter.getItemCount() - 1);
 
     }
 
