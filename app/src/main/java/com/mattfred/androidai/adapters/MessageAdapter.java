@@ -19,14 +19,19 @@ import java.util.List;
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
     private List<Message> messages;
+    private RecyclerView recyclerView;
 
-    public MessageAdapter(List<Message> messages) {
+    public MessageAdapter(List<Message> messages, RecyclerView recyclerView) {
         this.messages = messages;
+        this.recyclerView = recyclerView;
     }
 
     public void addMessage(Message message) {
         messages.add(message);
-        this.notifyDataSetChanged();
+        if (recyclerView != null && !recyclerView.isComputingLayout()) {
+            this.notifyDataSetChanged();
+            recyclerView.scrollToPosition(getItemCount() - 1);
+        }
     }
 
     @Override

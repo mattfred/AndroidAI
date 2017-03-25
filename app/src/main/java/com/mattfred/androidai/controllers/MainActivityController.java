@@ -27,15 +27,18 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
     private AIResponse listener;
     private Ari ari;
     private String userName;
+    private boolean userInput = false;
 
     public MainActivityController(AIResponse listener) {
         this.listener = listener;
         this.ari = new Ari();
         userName = Preferences.getName((Context) listener);
-        onResults(ari.signon(!userName.equals("")));
+        onResults(ari.signon(!userName.equals(""), userName));
     }
 
     public void analyzeText(String text) {
+        Timber.e("User name is: " + userName);
+        userInput = true;
         if (userName.equals("")) {
             ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
             apacheAnalyzer.execute(text);
@@ -115,8 +118,9 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
     @Override
     public void onResults(String response) {
+        Timber.e("On Results: " + response);
         if (listener != null)
-            if (userName.equals("")) {
+            if (userName.equals("") && userInput) {
                 if (!response.equals("")) {
                     userName = response;
                     Preferences.saveName((Context) listener, response);
@@ -125,6 +129,7 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
             } else {
                 listener.sendResponse(response);
             }
+        if (userInput) userInput = !userInput;
     }
 
     public interface AIResponse {

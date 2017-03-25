@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     private void setupListView() {
         messageArea = (RecyclerView) findViewById(R.id.message_area);
         List<Message> messages = new ArrayList<>();
-        adapter = new MessageAdapter(messages);
+        adapter = new MessageAdapter(messages, messageArea);
         messageArea.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         messageArea.setItemAnimator(new DefaultItemAnimator());
         messageArea.setAdapter(adapter);
@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
             }).start();
         }
         messageArea.scrollToPosition(adapter.getItemCount() - 1);
-
     }
 
     @Override
@@ -114,10 +113,15 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     }
 
     @Override
-    public void sendResponse(String text) {
-        thinking.setVisibility(View.GONE);
-        if (text != null) {
-            addMessage(new Message(false, text));
-        }
+    public void sendResponse(final String text) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                thinking.setVisibility(View.GONE);
+                if (text != null) {
+                    addMessage(new Message(false, text));
+                }
+            }
+        });
     }
 }
