@@ -1,7 +1,7 @@
 package com.mattfred.androidai.models;
 
 /**
- * Watson Text
+ * Watson Text. Text portion of watson response
  */
 
 public class WatsonText {

@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by matthewfrederick on 2/2/17.
+ * Watson response. Full model of all watson JSON values
  */
 
 public class WatsonResponse {

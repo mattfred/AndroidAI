@@ -8,19 +8,39 @@ import opennlp.tools.util.Span;
 import timber.log.Timber;
 
 /**
- * Apache Analyzer Async Task
+ * Apache Analyzer Async Task. This will allow the Apache library to analyze input in a
+ * background thread
  */
 
 public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
 
+    /**
+     * Activity context
+     */
     private Context context;
+
+    /**
+     * Analyzer completed listener
+     */
     private AnalyzerListener listener;
 
+    /**
+     * Constructor
+     *
+     * @param context  activity context
+     * @param listener analyzer completed listnener
+     */
     public ApacheAnalyzer(Context context, AnalyzerListener listener) {
         this.context = context;
         this.listener = listener;
     }
 
+    /**
+     * Logic to be run in background
+     *
+     * @param strings user input
+     * @return User's name
+     */
     @Override
     protected String doInBackground(String... strings) {
 
@@ -67,6 +87,11 @@ public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
         return null;
     }
 
+    /**
+     * Called once background logic has been completed
+     *
+     * @param string response
+     */
     @Override
     protected void onPostExecute(@Nullable String string) {
         super.onPostExecute(string);
@@ -76,6 +101,9 @@ public class ApacheAnalyzer extends AsyncTask<String, Void, String> {
 
     }
 
+    /**
+     * Listener interface
+     */
     public interface AnalyzerListener {
         void onResults(String response);
     }

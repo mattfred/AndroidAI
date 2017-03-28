@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Created by matthewfrederick on 2/2/17.
+ * Object returned from watson api
  */
 
 public class Tone {

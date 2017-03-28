@@ -21,8 +21,12 @@ import com.mattfred.androidai.models.Message;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Main activity of application.
+ */
 public class MainActivity extends AppCompatActivity implements MainActivityController.AIResponse {
 
+    // references to all view objects
     private EditText input;
     private MessageAdapter adapter;
     private MainActivityController controller;
@@ -30,10 +34,17 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
     private TextView thinking;
 
     private Handler handler = new Handler();
+
+    // color references
     private int currentRed = 250;
     private int currentBlue = 250;
     private int currentGreen = 250;
 
+    /**
+     * On Create
+     *
+     * @param savedInstanceState bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         controller = new MainActivityController(this);
     }
 
+    /**
+     * Setup ui input
+     */
     private void setupUI() {
         input = (EditText) findViewById(R.id.input);
         input.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -59,6 +73,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         });
     }
 
+    /**
+     * Setup ui recycler view
+     */
     private void setupListView() {
         messageArea = (RecyclerView) findViewById(R.id.message_area);
         List<Message> messages = new ArrayList<>();
@@ -68,6 +85,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         messageArea.setAdapter(adapter);
     }
 
+    /**
+     * Add message to recycler view
+     *
+     * @param message message to be added
+     */
     private void addMessage(final Message message) {
         adapter.addMessage(message);
         input.setText("");
@@ -84,6 +106,14 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         messageArea.scrollToPosition(adapter.getItemCount() - 1);
     }
 
+    /**
+     * Take colors returned from watson results and fade background color to new color values.
+     * A loop is used to allow for slow fade. Handler is used to not freeze app.
+     *
+     * @param red   red value
+     * @param green green value
+     * @param blue  blue value
+     */
     @Override
     public void onWatsonResults(final int red, final int green, final int blue) {
         (new Thread() {
@@ -112,6 +142,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityContr
         }).start();
     }
 
+    /**
+     * show response to user
+     *
+     * @param text response
+     */
     @Override
     public void sendResponse(final String text) {
         runOnUiThread(new Runnable() {

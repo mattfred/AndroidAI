@@ -6,7 +6,14 @@ package com.mattfred.androidai.models;
 
 public class Message {
 
+    /**
+     * boolean signifying if message is from user
+     */
     private boolean user;
+
+    /**
+     * message content
+     */
     private String content;
 
     public Message(boolean user, String content) {

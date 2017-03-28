@@ -5,7 +5,7 @@ import android.app.Application;
 import timber.log.Timber;
 
 /**
- * AI Application Class
+ * AI Application Class. Used to setup Timber and xml reader
  */
 
 public class AiApplication extends Application {

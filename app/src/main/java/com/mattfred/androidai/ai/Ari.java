@@ -7,6 +7,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Objects;
 
+/**
+ * Ari brain. This class contains all the responses for each handled input.
+ */
 public class Ari {
 
     private final int maxResp = 6;
@@ -520,27 +523,6 @@ public class Ari {
                     {"DREAMS", "DREAM"},
                     {"MYSELF", "YOURSELF"}
             };
-
-//    public static void main(String[] args) throws Exception {
-//        try {
-//            signon();
-//            while (!quit()) {
-//                getInput();
-//                respond();
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public static void getInput() throws Exception {
-//        System.out.print(">");
-//        // saves the previous input
-//        savePrevInput();
-//        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-//        sInput = in.readLine();
-//        preprocessInput();
-//    }
 
     private void setEvent(String str) {
         sEvent = str;
