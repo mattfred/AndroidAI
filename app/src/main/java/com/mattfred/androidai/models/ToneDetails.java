@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Tone Details
+ * Tone Details. Retruned from watson api
  */
 
 public class ToneDetails {

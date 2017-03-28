@@ -1,10 +1,15 @@
 package com.mattfred.androidai.ai;
 
+import android.support.annotation.Nullable;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Objects;
 
+/**
+ * Ari brain. This class contains all the responses for each handled input.
+ */
 public class Ari {
 
     private final int maxResp = 6;
@@ -108,6 +113,16 @@ public class Ari {
                                     "Actually I’m very intelligent!"}
                     },
 
+                    {{"YOU'RE SMART", "YOU'RE GREAT", "YOU'RE WONDERFUL"},
+                            {"Thank you. I have a great team of developers helping me learn."}
+                    },
+
+                    {{"YOURE SMART", "YOURE GREAT", "YOURE WONDERFUL", "YOUR SMART",
+                            "YOUR GREAT", "YOUR WONDERFUL"},
+                            {"Thank you, but I think you ment to say \"you're\"."}
+                    },
+
+
                     {{"MY NAME IS", "YOU CAN CALL ME"},
                             {"So, that's your name.",
                                     "Thanks for telling me your name!",
@@ -115,8 +130,8 @@ public class Ari {
                     },
 
                     {{"SIGNON**"},
-                            {"Hello, how are you doing today?",
-                                    "Hi, what can I do for you?",
+                            {"How are you doing today?",
+                                    "What can I do for you?",
                                     "You are now chating with ari, anything you want to discuss?"}
                     },
 
@@ -509,27 +524,6 @@ public class Ari {
                     {"MYSELF", "YOURSELF"}
             };
 
-//    public static void main(String[] args) throws Exception {
-//        try {
-//            signon();
-//            while (!quit()) {
-//                getInput();
-//                respond();
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
-
-//    public static void getInput() throws Exception {
-//        System.out.print(">");
-//        // saves the previous input
-//        savePrevInput();
-//        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-//        sInput = in.readLine();
-//        preprocessInput();
-//    }
-
     private void setEvent(String str) {
         sEvent = str;
     }
@@ -661,10 +655,11 @@ public class Ari {
         restoreInput();
     }
 
-    public String signon(boolean gotName) {
+    public String signon(boolean gotName, @Nullable String name) {
         if (gotName) {
             handleEvent("SIGNON**");
             selectResponse();
+            sResponse = "Hello, " + name + ". " + sResponse;
         } else {
             sResponse = "Hello. My name is ari. It is nice to meet you. What is your name?";
         }

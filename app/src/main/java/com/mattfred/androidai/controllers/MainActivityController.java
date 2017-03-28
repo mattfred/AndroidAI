@@ -19,30 +19,63 @@ import retrofit2.Response;
 import timber.log.Timber;
 
 /**
- * Main Activity Controller
+ * Main Activity Controller. Logic used for the main activity view
  */
 
 public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
+    /**
+     * Listener for AI response
+     */
     private AIResponse listener;
+
+    /**
+     * Ari brain object
+     */
     private Ari ari;
+
+    /**
+     * User name that is saved in preferences
+     */
     private String userName;
 
+    /**
+     * boolean used to signify if response is from user or AI
+     */
+    private boolean userInput = false;
+
+    /**
+     * Constructor
+     *
+     * @param listener AI response listener
+     */
     public MainActivityController(AIResponse listener) {
         this.listener = listener;
         this.ari = new Ari();
         userName = Preferences.getName((Context) listener);
-        onResults(ari.signon(!userName.equals("")));
+        onResults(ari.signon(!userName.equals(""), userName));
     }
 
+    /**
+     * Analyze user text. Application will take user input and attempt to come up with
+     * an appropriate response
+     *
+     * @param text user input text
+     */
     public void analyzeText(String text) {
+        Timber.e("User name is: " + userName);
+        userInput = true;
+
+        // if no user name is saved, ari will attempt to pull one out of the input text.
         if (userName.equals("")) {
             ApacheAnalyzer apacheAnalyzer = new ApacheAnalyzer((Context) listener, this);
             apacheAnalyzer.execute(text);
         } else {
+            // once user name is saved, ari will attempt to come up with the appropriate response
             tryAri(text);
         }
 
+        // Watson api is used to determine background color
         WatsonText watsonText = new WatsonText(text);
         WatsonInterface watsonInterface = WatsonService.getWatsonService();
         Call<WatsonResponse> call = watsonInterface.getDocumentTone("2016-05-19", watsonText);
@@ -54,15 +87,23 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
             @Override
             public void onFailure(Call<WatsonResponse> call, Throwable t) {
-
+                Timber.e(t);
             }
         });
     }
 
+    /**
+     * A response from Ari class is sent to listener to update recycler view
+     * @param text input text
+     */
     private void tryAri(String text) {
         if (listener != null) listener.sendResponse(ari.preprocessInput(text));
     }
 
+    /**
+     * Algorithm for converting watson response into a color.
+     * @param documentTone watson response object
+     */
     private void analyzeResults(DocumentTone documentTone) {
 
         Timber.d(documentTone.toString());
@@ -73,7 +114,6 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
                 int green = 150;
                 int blue = 150;
                 double joy = 0;
-                int alpha = 255;
                 for (ToneDetails details : tone.getTones()) {
                     switch (details.getTone_name()) {
                         case "Anger":
@@ -87,9 +127,6 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
                         case "Sadness":
                             blue += colorPercent(details.getScore());
                             if (blue > 255) blue = 255;
-                            break;
-                        case "Fear":
-                            alpha -= (colorPercent(details.getScore()) / 2);
                             break;
                         case "Joy":
                             joy = details.getScore() * 100;
@@ -108,15 +145,27 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
 
     }
 
+    /**
+     * Convert watson percentage to a usable color value
+     *
+     * @param value watson percentage
+     * @return color value
+     */
     private int colorPercent(double value) {
         double num = value * 100 * 2;
         return (int) num;
     }
 
+    /**
+     * Method called when a response is received. This is called for a response from user and AI
+     * @param response text response
+     */
     @Override
     public void onResults(String response) {
+        Timber.e("On Results: " + response);
         if (listener != null)
-            if (userName.equals("")) {
+            // if user name is null and response is from user, save username
+            if (userName.equals("") && userInput) {
                 if (!response.equals("")) {
                     userName = response;
                     Preferences.saveName((Context) listener, response);
@@ -125,8 +174,12 @@ public class MainActivityController implements ApacheAnalyzer.AnalyzerListener {
             } else {
                 listener.sendResponse(response);
             }
+        if (userInput) userInput = !userInput;
     }
 
+    /**
+     * Listener for handling different response types
+     */
     public interface AIResponse {
         void onWatsonResults(int red, int green, int blue);
         void sendResponse(String text);

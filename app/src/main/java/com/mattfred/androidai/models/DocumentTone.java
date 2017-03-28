@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * Document Tone
+ * Document Tone. Returned by watson API
  */
 
 public class DocumentTone {

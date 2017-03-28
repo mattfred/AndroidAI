@@ -13,20 +13,44 @@ import com.mattfred.androidai.models.Message;
 import java.util.List;
 
 /**
- * Message Adapter
+ * Message Adapter. This adapter is used to display user and AI messages in the main activity
+ * recycler view.
  */
 
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageViewHolder> {
 
+    /**
+     * List of messages
+     */
     private List<Message> messages;
 
-    public MessageAdapter(List<Message> messages) {
+    /**
+     * Recycler view that will hold messages
+     */
+    private RecyclerView recyclerView;
+
+    /**
+     * Constructor
+     *
+     * @param messages     list of messages
+     * @param recyclerView recycler view
+     */
+    public MessageAdapter(List<Message> messages, RecyclerView recyclerView) {
         this.messages = messages;
+        this.recyclerView = recyclerView;
     }
 
+    /**
+     * Add messages to recycler view
+     *
+     * @param message message to be added
+     */
     public void addMessage(Message message) {
         messages.add(message);
-        this.notifyDataSetChanged();
+        if (recyclerView != null && !recyclerView.isComputingLayout()) { // can't redraw while computing layout
+            this.notifyDataSetChanged();
+            recyclerView.scrollToPosition(getItemCount() - 1);
+        }
     }
 
     @Override
@@ -35,6 +59,12 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
                 .inflate(R.layout.message_layout, parent, false));
     }
 
+    /**
+     * Bind model to view
+     *
+     * @param holder message view holder containing view widget references
+     * @param position position in list of current view
+     */
     @Override
     public void onBindViewHolder(MessageViewHolder holder, int position) {
         Message message = messages.get(position);
@@ -57,6 +87,9 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
         return messages.size();
     }
 
+    /**
+     * Object containing reference to recycler view individual items
+     */
     class MessageViewHolder extends RecyclerView.ViewHolder {
 
         View leftSpace;

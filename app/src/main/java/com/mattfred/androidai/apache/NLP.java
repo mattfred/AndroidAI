@@ -21,11 +21,18 @@ import opennlp.tools.util.Span;
 import timber.log.Timber;
 
 /**
- * Tokenizer
+ * NLP logic class. This class contains all the methods available in the Apache NLP logic.
  */
 
 class NLP {
 
+    /**
+     * Converts input string into tokens
+     *
+     * @param context activity context
+     * @param input   user input
+     * @return string array of tokens
+     */
     static String[] getTokens(Context context, String input) {
         try {
             InputStream inputStream = context.getAssets().open("en-token.bin");
@@ -39,6 +46,13 @@ class NLP {
         return null;
     }
 
+    /**
+     * Returns names contained in tokens
+     *
+     * @param context activity context
+     * @param strings string array of tokens
+     * @return proper name
+     */
     static Span[] getNames(Context context, String[] strings) {
         try {
             InputStream inputStream = context.getAssets().open("en-ner-person.bin");
@@ -52,6 +66,13 @@ class NLP {
         return null;
     }
 
+    /**
+     * Returns parts of speech for each token
+     *
+     * @param context activity context
+     * @param strings string array of tokens
+     * @return string array of parts of speech
+     */
     static String[] getPartsOfSpeech(Context context, String[] strings) {
         try {
             InputStream modelIn = context.getAssets().open("en-pos-maxent.bin");
@@ -65,6 +86,13 @@ class NLP {
         return null;
     }
 
+    /**
+     * Get parse
+     *
+     * @param context activity context
+     * @param text    user input
+     * @return parser
+     */
     static Parse[] getParse(Context context, String text) {
         try {
             InputStream inputStream = context.getAssets().open("en-parser-chunking.bin");

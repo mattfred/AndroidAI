@@ -15,6 +15,13 @@ import retrofit2.http.Query;
 
 public interface WatsonInterface {
 
+    /**
+     * Get watson results from tone analyzer
+     *
+     * @param version watson api version to be used
+     * @param text    text to be analyzed
+     * @return watson document tone
+     */
     @Headers({
             "Content-Type: application/json",
             "Accept: application/json"
