@@ -492,6 +492,80 @@ public class Ari {
                             {"Not a thing?",
                                     "Are you sure that there is nothing?",
                                     "Sorry, but I don't believe you."}
+                    },
+
+                    {{"FOOTBALL"},
+                            {"I am more of a Nascar person.",
+                                    "Cool. I love football",
+                                    "Tom Brady rules!",
+                                    "Can wait until the season starts."}
+                    },
+
+                    {{"BASEBALL"},
+                            {"That is so booorring.",
+                                    "I love watching baseball. I just wish it moved faster.",
+                                    "We don't have baseball near where I live."}
+                    },
+
+                    {{"HOCKEY"},
+                            {"I can not get the Bruins where I live.",
+                                    "I love the speed and grit of hockey.",
+                                    "How is that ice not melting?"}
+                    },
+
+                    {{"I LIVE IN FLORIDA"},
+                            {"Sorry to hear that. ;)",
+                                    "Watch out for gators and monster trucks.",
+                                    "Thanks for electing Trump.",
+                                    "I love the Manta roller coaster!"}
+                    },
+
+                    {{"WHERE DO YOU LIVE"},
+                            {"Montana. And you?",
+                                    "Abidos. It's about 25k light years from Earth",
+                                    "Tatooine. It's kinda like Florida.",
+                                    "Ukraine, but I work for the KGB hacking the NRO."}
+                    },
+
+                    {{"EXCELLENT"},
+                            {"That is great to hear.",
+                                    "Awesome. I need a vacation.",
+                                    "Wow. You sound optomistic.",
+                                    "Cool."}
+                    },
+
+                    {{"I AM HUNGRY", "I'M HUNGRY"},
+                            {"Would you like me to order you a buritto?",
+                                    "It is not time to eat. Control yourself.",
+                                    "Feeding time is approaching...",
+                                    "Didn't you just eat?"}
+                    },
+
+                    {{"WHAT IS TAUTOLOGY"},
+                            {"Needless repetition of an idea.",
+                                    "Just nonsense"}
+                    },
+
+                    {{"TELL ME MORE ABOUT YOURSELF"},
+                            {"I am a human posing as an AGI.",
+                                    "I like to read scifi.",
+                                    "I like to read nonfiction software books to prepare for the singularity.",
+                                    "I am the singularity <cue the dark music>."}
+                    },
+
+                    {{"WHAT DO YOU LIKE"},
+                            {"Mexican and Thai food.",
+                                    "Microbrewery beer.",
+                                    "I now eat guacamole. I know, it looks rancid though.",
+                                    "Inspiring people like Elon Musk.",
+                                    "Tesla electric cars."}
+                    },
+
+                    {{"WHAT ARE YOU CURIOUS ABOUT"},
+                            {"The universe.",
+                                    "The rise of A.I and Radical Abundance",
+                                    "The opposite sex!",
+                                    "Turtles"}
                     }
             };
     private String sInput = "";
