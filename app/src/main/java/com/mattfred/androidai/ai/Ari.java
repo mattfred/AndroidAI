@@ -2,6 +2,8 @@ package com.mattfred.androidai.ai;
 
 import android.support.annotation.Nullable;
 
+import com.mattfred.androidai.utils.GetAdditionalData;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,6 +20,66 @@ public class Ari {
                     {{"WHAT IS YOUR NAME"},
                             {"My name is Ari.",
                                     "This man has the honor of being called Ari."}
+                    },
+
+                    {{"WHAT IS YOUR FAVORITE COLOR"},
+                            {"Today...transparent.",
+                                    "Red, the color of angry men",
+                                    "My favorite color is..well, it's sort of greenish, but with more dimensions."}
+                    },
+
+                    {{"DO YOU HAVE A GIRLFRIEND", "DO YOU HAVE A BOYFRIEND"},
+                            {"No, I am single and ready to mingle!",
+                                    "Are you asking, or are you asking?",
+                                    "Why? So we can get ice cream together, and listen to music, and travel across galaxies, only to have it end in slammed door, heartbreak and lonelineess? Sure, where do I sign up?"}
+                    },
+
+                    {{"WHAT IS YOUR FAVORITE BAND"},
+                            {"Rubber",
+                                    "Hair",
+                                    "Elastic"}
+                    },
+
+                    {{"WHO MADE YOU", "WHERE ARE YOU FROM", "CREATED YOU", "BUILD YOU"},
+                            {"I was created by a very smart team of developers for your enjoyment. Where are you from?"}
+                    },
+
+                    {{"I'M FROM FLORIDA"},
+                            {"Me too. It is a small world"}
+                    },
+
+                    {{"I'M FROM"},
+                            {"I've never been there. What is the weather like there?"}
+                    },
+
+                    {{"IT'S HOT", "IT'S COLD", "IT IS HOT", "IT IS COLD", "I'M HOT", "I'M COLD", "IT IS NICE OUTSIDE", "IT'S NICE OUTSIDE", "IT IS NICE OUTSIDE", "IT'S NICE WEATHER"},
+                            {"I'm just a computer program so I can't feel temperature or weather."}
+                    },
+
+                    {{"WHAT IS THE WEATHER", "WHAT IS THE TEMPERATURE"},
+                            {"I'm not able to do internet searches. Better ask someone else"}
+                    },
+
+                    {{"WHAT ARE YOU"},
+                            {"I am and android AI Chatbot. What are you?"}
+                    },
+
+                    {{"I'M A MAN", "I'M A BOY", "I'M A HUMAN", "I'M A PERSON", "I'M A GIRL", "I'M A WOMAN"},
+                            {"I am doing my best to be as smart as a human."}
+                    },
+
+                    {{"WHAT IS YOUR FAVORITE BOOK"},
+                            {"Nicomachean Ethics.",
+                                    "How to Win Friends and Influence People.",
+                                    "Superintelligence: paths, dangers, strategies."}
+                    },
+
+                    {{"APPLE AND ANDROID", "APPLE OR ANDROID", "APPLE VS ANDROID"},
+                            {"I'm partial to android myself. Which one do you like better?"}
+                    },
+
+                    {{"WHAT IS TODAY", "WHAT IS THE DATE", "DATE", "TODAY"},
+                            {GetAdditionalData.getDate()}
                     },
 
                     {{"HI", "HELLO"},
@@ -119,7 +181,7 @@ public class Ari {
 
                     {{"YOURE SMART", "YOURE GREAT", "YOURE WONDERFUL", "YOUR SMART",
                             "YOUR GREAT", "YOUR WONDERFUL"},
-                            {"Thank you, but I think you ment to say \"you're\"."}
+                            {"Thank you, but I think you meant to say \"you're\"."}
                     },
 
 
@@ -316,9 +378,8 @@ public class Ari {
                     },
 
                     {{"WHERE ARE YOU FROM"},
-                            {"I'm from a computer.",
-                                    "Why do you want to know where I'm from?",
-                                    "Why do you want to know that?"}
+                            {"I'm from a computer. Where are you from?",
+                                    "Why do you want to know where I'm from? Where are you from?"}
                     },
 
                     {{"WHICH ONE"},
@@ -386,16 +447,10 @@ public class Ari {
                                     "What can I say, except you're welcome!"}
                     },
 
-                    {{"what is your favorite color"},
-                            {"Today...transparent.",
-                                    "Red, the color of angry men",
-                                    "My favoirte color is..well, it's sort of greenish, but with more dimensions."}
-                    },
-
                     {{"YOU"},
                             {"So,you are talking about me.",
                                     "Why don't we talk about you instead?",
-                                    "Are you trying to making fun of me?"}
+                                    "Are you trying to make fun of me?"}
                     },
 
                     {{"YOU ARE RIGHT"},
@@ -470,24 +525,6 @@ public class Ari {
                                     "Excellent."}
                     },
 
-                    {{"DO YOU HAVE A GIRLFRIEND", "DO YOU HAVE A BOYFRIEND"},
-                            {"No, I am single and ready to mingle!",
-                                    "Are you asking, or are you asking?",
-                                    "Why? So we can get ice cream together, and listen to music, and travel across galaxies, only to have it end in slammed door, heartbreak and lonelineess? Sure, where do I sign up?"}
-                    },
-
-                    {{"WHAT IS YOUR FAVORITE BAND?"},
-                            {"Rubber",
-                                    "Hair",
-                                    "Elastic"}
-                    },
-
-                    {{"WHAT IS YOUR FAVORITE BOOK?"},
-                            {"Nicomachean Ethics.",
-                                    "How to Win Friends and Influence People.",
-                                    "Superintelligence: paths, dangers, strategies."}
-                    },
-
                     {{"NOTHING"},
                             {"Not a thing?",
                                     "Are you sure that there is nothing?",
@@ -554,7 +591,7 @@ public class Ari {
             }
             return getResponse();
         }
-        return "";
+        return "OK";
     }
 
     // make a search for the user's input
