@@ -162,7 +162,7 @@ public class Ari {
                                     "Neither."}
                     },
 
-                    {{"WHAT IS TODAY", "WHAT IS THE DATE", "DATE", "TODAY"},
+                    {{"WHAT IS TODAY", "WHAT IS THE DATE", "DATE", "TODAY", "WHAT DAY IS IT", "DAY"},
                             {GetAdditionalData.getDate()}
                     },
 
