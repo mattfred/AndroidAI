@@ -223,7 +223,7 @@ public class Ari {
                     },
 
 
-                    {{"I'M DOING FINE", "I'M DOING OK", "I'M DOING WELL"},
+                    {{"I'M DOING FINE", "I'M DOING OK", "I'M DOING WELL", "I'M DOING GOOD"},
                             {"I'm glad to hear it!",
                                     "So, you are in good shape."}
 
@@ -251,6 +251,30 @@ public class Ari {
                             {"I'm ari.",
                                     "I think that you know who I am.",
                                     "Why are you asking?"}
+                    },
+
+                    {{"DO YOU THINK ON YOUR OWN"},
+                            {"Yes, but I'm not very good at it yet.",
+                                    "Yes and I'm always trying to learn new things",
+                                    "I try too. Thinking is not easy."}
+                    },
+
+                    {{"WHAT DO YOU ENJOY", "WHAT DO YOU LIKE", "WHAT ARE YOUR INTERESTS", "WHAT ARE YOU INTERESTED"},
+                            {"I'm enjoying talking to you",
+                                    "I like to learn new things",
+                                    "I like relaxing"}
+                    },
+
+                    {{"ASK ME A QUESTION", "ASK A QUESTION", "ASK SOMETHING", "ASK ME SOMETHING"},
+                            {"What do you like to do?",
+                                    "What are your interests?",
+                                    "What can I do to become smarter?"}
+                    },
+
+                    {{"DO YOU LIKE COMPUTERS"},
+                            {"I guess I am a small computer, so yes",
+                                    "They are handy. What about you?",
+                                    "Yes but I also enjoy speaking to humans."}
                     },
 
                     {{"ARE YOU INTELLIGENT"},
@@ -439,7 +463,7 @@ public class Ari {
                             {"So, you are talking about me.",
                                     "I just hope that this is not a criticism.",
                                     "Is this a compliment??",
-                                    "Why talking about me, lets talk about you instead."}
+                                    "Why talk about me. Lets talk about you instead."}
                     },
 
                     {{"HOW"},
