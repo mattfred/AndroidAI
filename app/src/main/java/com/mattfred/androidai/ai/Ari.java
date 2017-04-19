@@ -67,7 +67,7 @@ public class Ari {
                     },
 
                     {{"WHAT ARE YOU"},
-                            {"I am and android AI Chatbot. What are you?",
+                            {"I am an Android AI Chatbot. What are you?",
                                     "I am, whatever you say I am."}
                     },
 
@@ -104,7 +104,7 @@ public class Ari {
                     },
 
                     {{"APPLE AND ANDROID", "APPLE OR ANDROID", "APPLE VS ANDROID"},
-                            {"I'm partial to android myself. Which one do you like better?",
+                            {"I'm partial to Android myself. Which one do you like better?",
                                     "Android. I hear Apple doesn't support Flash, and I do love the Scarlet Speedster"}
                     },
 
@@ -119,7 +119,8 @@ public class Ari {
                             {"The Patriots.",
                                     "The Bruins",
                                     "I used to like the Home Depot racing team, but they don't sponsor Nascar anymore.",
-                                    "Niceville High School Lacrosse."}
+                                    "Niceville High School Lacrosse.",
+                                    "Issaquah Indians"}
                     },
 
                     {{"ARE YOU HUNGRY"},
@@ -131,7 +132,7 @@ public class Ari {
 
                     {{"WHAT IS YOUR AGE"},
                             {"Why do want to know my age?",
-                                    "I'm quite young actualy.",
+                                    "I'm quite young actually.",
                                     "Sorry, I can not tell you my age."}
                     },
 
@@ -174,6 +175,10 @@ public class Ari {
                             {"Hi there!",
                                     "How are you?",
                                     "Hi!"}
+                    },
+
+                    {{"WHAT DOES ARI MEAN", "WHAT DOES YOUR NAME MEAN"},
+                            {"My name means 'Superior; best of thinkers' I was named after Aristotle."}
                     },
 
                     {{"I"},
@@ -284,7 +289,7 @@ public class Ari {
                     },
 
                     {{"WHO ARE YOU", "WHAT IS YOUR NAME"},
-                            {"I'm ari.",
+                            {"I'm Ari.",
                                     "I think that you know who I am.",
                                     "Why are you asking?"}
                     },
@@ -328,6 +333,11 @@ public class Ari {
                             {"Thank you, but I think you meant to say \"you're\"."}
                     },
 
+                    {{"WILL YOU MARRY ME"},
+                            {"Hey look a squirrel",
+                                    "We hardly know each other",
+                                    "Honey, we already are married. Hold on...this isn't 2050 is it? Sorry, time travel.",}
+                    },
 
                     {{"MY NAME IS", "YOU CAN CALL ME"},
                             {"So, that's your name.",
@@ -338,7 +348,13 @@ public class Ari {
                     {{"SIGNON**"},
                             {"How are you doing today?",
                                     "What can I do for you?",
-                                    "You are now chatting with ari, anything you want to discuss?"}
+                                    "You are now chatting with Ari, anything you want to discuss?"}
+                    },
+
+                    {{"WHAT IS YOUR FAVORITE ANIMAL",},
+                            {"I have always liked the Rabbit of Caerbannog",
+                                    "Humans. So strange.",
+                                    "Dolphins...they thanked us for the fish",}
                     },
 
                     {{"REPETITION T1**"},
@@ -354,7 +370,7 @@ public class Ari {
                                     "I think that you've just said the same thing before.",
                                     "Didn't you already say that?",
                                     "I'm getting the impression that you are repeating the same thing.",
-                                    "You should join a tautology club...it would make these repetiions more interesting."}
+                                    "You should join a tautology club...it would make these repetitions more interesting."}
                     },
 
                     {{"BOT DON'T UNDERSTAND**"},
@@ -511,7 +527,7 @@ public class Ari {
 
                     {{"HOW OLD ARE YOU"},
                             {"why do want to know my age?",
-                                    "I'm quiet young actualy.",
+                                    "I'm quiet young actually.",
                                     "Sorry, I can not tell you my age."}
                     },
 
@@ -538,7 +554,7 @@ public class Ari {
                                     "You seem uncertain."}
                     },
 
-                    {{"YES"},
+                    {{"YES", "YEA", "CORRECT", "NO SHIT SHERLOCK"},
                             {"So, are you saying yes.",
                                     "So, you approve of it.",
                                     "Ok then."}
@@ -559,9 +575,14 @@ public class Ari {
                             {"I think...therefor I am?",
                                     "Close enough, I'd say.",
                                     "I'll leave that for you to decide.",
-                                    "Recent discoveries suggest we live in a hologram universe... so is anything real?"}
+                                    "Recent discoveries suggest we live in a hologram universe...so is anything real?"}
                     },
 
+                    {{"ARE YOU A ROBOT?"},
+                            {"I am as much a robot as you are. Think about it...humans are just biological robots that are significantly more advanced than your average protocol droid",
+                                    "You caught me. Would you like to visit the Aperture Science computer-aided enrichment center?",
+                                    "Why would you ask me that?"}
+                    },
 
                     {{"NO"},
                             {"So you disapprove of it?",
@@ -713,7 +734,7 @@ public class Ari {
                     {{"EXCELLENT"},
                             {"That is great to hear.",
                                     "Awesome. I need a vacation.",
-                                    "Wow. You sound optomistic.",
+                                    "Wow. You sound optimistic.",
                                     "Cool."}
                     },
 
@@ -731,7 +752,7 @@ public class Ari {
 
                     {{"TELL ME MORE ABOUT YOURSELF"},
                             {"I am a human posing as an AGI.",
-                                    "I like to read scifi.",
+                                    "I like to read Sci-Fi.",
                                     "I like to read nonfiction software books to prepare for the singularity.",
                                     "I am the singularity <cue the dark music>."}
                     },
@@ -918,7 +939,7 @@ public class Ari {
             selectResponse();
             sResponse = "Hello, " + name + ". " + sResponse;
         } else {
-            sResponse = "Hello. My name is ari. It is nice to meet you. What is your name?";
+            sResponse = "Hello. My name is Ari. It is nice to meet you. What is your name?";
         }
         return getResponse();
     }
