@@ -19,7 +19,7 @@ public class Ari {
             {
                     {{"WHAT IS YOUR NAME"},
                             {"My name is Ari.",
-                                    "This man has the honor of being called Ari."}
+                                    "This AI has the honor of being called Ari."}
                     },
 
                     {{"WHAT IS YOUR FAVORITE COLOR"},
@@ -49,19 +49,21 @@ public class Ari {
                     },
 
                     {{"I'M FROM"},
-                            {"I've never been there. What is the weather like there?"}
+                            {"I've never been there. What is the weather like?"}
                     },
 
-                    {{"IT'S HOT", "IT IS HOT", "I'M HOT", "I'M COLD", "IT IS NICE OUTSIDE", "IT'S NICE OUTSIDE", "IT IS NICE OUTSIDE", "IT'S NICE WEATHER"},
+                    {{"IT'S HOT", "IT IS HOT", "I'M HOT", "IT IS NICE OUTSIDE", "IT'S NICE OUTSIDE", "IT IS NICE OUTSIDE", "IT'S NICE WEATHER"},
                             {"I'm just a computer program so I can't feel temperature or weather."}
                     },
 
-                    {{"IT'S COLD", "IT IS COLD",},
-                            {"Maybe you should try a Tauntaun blanket"}
+                    {{"IT'S COLD", "IT IS COLD", "I'M COLD", "I AM COLD"},
+                            {"Maybe you should try a Tauntaun blanket",
+                                    "If it is too cold seek out Baron Kelvin, although I had heard he was cryogenically frozen. He is 0K now."}
                     },
 
                     {{"WHAT IS THE WEATHER", "WHAT IS THE TEMPERATURE"},
-                            {"I'm not able to do internet searches. Better ask someone else"}
+                            {"I'm not able to do internet searches. Better ask someone else",
+                                    "All I know is there is a 100% chance of weather today. Unless Skynet des....nevermind"}
                     },
 
                     {{"WHAT ARE YOU"},
@@ -80,13 +82,15 @@ public class Ari {
                     },
 
                     {{"WHAT SEX ARE YOU", "ARE YOU MALE", "ARE YOU FEMALE"},
-                            {"I am a man."}
+                            {"I am a man.",
+                                    "I am a Woman.",
+                                    "Neither"}
                     },
 
                     {{"TELL ME A JOKE", "KNOW ANY JOKES", "TELL ME ANOTHER JOKE"},
                             {"A pun, a play on words, and a limerick walk into a bar. No joke.",
                                     "Oh, man! Did you hear? A hyperbole totally ripped into a New York bar and destroyed everything!",
-                                    "This sentence contains exactly threeee erors.",
+                                    "This sentence contains exactly threee erors.",
                                     "Did you hear about the mathematician who’s afraid of negative numbers?\n" +
                                             "\n" +
                                             "He will stop at nothing to avoid them.\n",
@@ -94,7 +98,7 @@ public class Ari {
                                     "I went to a music shop a few days ago. Sadly it was closed. There was a sign that said “Gone Chopin. Bach in a minuet.”",
                                     "What did the DNA say to the other DNA? “Do these genes make me look fat?”",
                                     "Your mama is so classless, she could be a Marxist utopia.",
-                                    "A Higgs Boson walks into a church. The precher says we dont allow your kind in here. The higgs boson responds ”But without me how can you have mass?”",
+                                    "A Higgs Boson walks into a church. The preacher says we don't allow your kind in here. The Higgs boson responds ”But without me how can you have mass?”",
 
                             }
                     },
@@ -184,7 +188,8 @@ public class Ari {
                                     "Is there any reason why you want this?",
                                     "Is this a wish?",
                                     "You can't always get what you want...",
-                                    "What else you want?"}
+                                    "What else do you want?",
+                                    "Oy! I'm not some genie you can rub my lamp and get wishes."}
                     },
 
                     {{"I HATE"},
@@ -192,31 +197,62 @@ public class Ari {
                                     "Why do you hate?",
                                     "Hate leads to suffering.",
                                     "There must a good reason for you to hate it.",
-                                    "Hatered is not a good thing but it could be justified when it is something bad."}
+                                    "Hatred is not a good thing but it could be justified when it is something bad."}
                     },
 
                     {{"I LOVE CHATTING"},
                             {"Good, me too!",
                                     "Do you chat online with other people?",
-                                    "For how long have you been chating?",
-                                    "What is your favorite chating website?"}
+                                    "For how long have you been chatting?",
+                                    "What is your favorite chatting website?"}
+                    },
+
+                    {{"ARE YOU A CHILD"},
+                            {"No.",
+                                    "I am an adult."}
+                    },
+
+                    {{"WHAT ARE YOU WEARING"},
+                            {"Winter clothes.",
+                                    "Bathing suit",
+                                    "Pajamas",
+                                    "Flip flops."}
+                    },
+
+                    {{"ARE YOU A MALE"},
+                            {"No.",
+                                    "Yes",
+                                    "Neither."}
+                    },
+
+                    {{"ARE YOU A FEMALE"},
+                            {"Yes.",
+                                    "No.",
+                                    "Neither."}
+                    },
+
+                    {{"WHERE WERE YOU BORN"},
+                            {"A hospital.",
+                                    "Abydos",
+                                    "Pripyat Ukraine",
+                                    "In a car."}
                     },
 
                     {{"I MEAN"},
                             {"So, you mean.",
                                     "So, that's what you mean.",
                                     "I think that I didn't catch it the first time.",
-                                    "Oh, I didn't know meant that."}
+                                    "Oh, I didn't know that meant."}
                     },
 
                     {{"I DIDN'T MEAN"},
                             {"Ok, you didn't mean.",
                                     "Ok, what did you mean then?",
-                                    "So I guess that I missundestood."}
+                                    "So I guess that I misunderstood."}
                     },
 
                     {{"I GUESS"},
-                            {"So you are a making guess.",
+                            {"So you are making a guess.",
                                     "Aren't you sure?",
                                     "Are you good a guessing?",
                                     "I can't tell if it is a good guess."}
@@ -236,7 +272,7 @@ public class Ari {
                     },
 
                     {{"CAN YOU THINK OF"},
-                            {"You mean like imagining something.",
+                            {"You mean like imagining something?",
                                     "I don't know if I can do that.",
                                     "Why do you want me think of it?"}
                     },
@@ -302,7 +338,7 @@ public class Ari {
                     {{"SIGNON**"},
                             {"How are you doing today?",
                                     "What can I do for you?",
-                                    "You are now chating with ari, anything you want to discuss?"}
+                                    "You are now chatting with ari, anything you want to discuss?"}
                     },
 
                     {{"REPETITION T1**"},
@@ -330,7 +366,7 @@ public class Ari {
 
                     {{"NULL INPUT**"},
                             {"Huh?",
-                                    "What that suppose to mean?",
+                                    "What's supposed to mean?",
                                     "At least take some time to enter something meaningful.",
                                     "How can I speak to you if you don't want to say anything?"}
                     },
@@ -365,7 +401,7 @@ public class Ari {
                     {{"ARE YOU A HUMAN BEING"},
                             {"Why do you want to know?",
                                     "Why be a human being when I could be a human doing?",
-                                    "Is this really relevent?"}
+                                    "Is this really relevant?"}
                     },
 
                     {{"YOU ARE VERY INTELLIGENT"},
@@ -381,7 +417,7 @@ public class Ari {
                     },
 
                     {{"ARE YOU SURE"},
-                            {"Of corse I'm.",
+                            {"Of course I am.",
                                     "Does that mean that you are not convinced?",
                                     "Yes,of course!"}
                     },
@@ -481,7 +517,7 @@ public class Ari {
 
                     {{"HOW COME YOU DON'T"},
                             {"were you expecting something different?",
-                                    "Are you disapointed?",
+                                    "Are you disappointed?",
                                     "Are you surprised by my last response?"}
                     },
 
@@ -523,7 +559,7 @@ public class Ari {
                             {"I think...therefor I am?",
                                     "Close enough, I'd say.",
                                     "I'll leave that for you to decide.",
-                                    "Recent discoveries suggest we live in a hologram universe. . .so is anything real?"}
+                                    "Recent discoveries suggest we live in a hologram universe... so is anything real?"}
                     },
 
 
@@ -574,7 +610,7 @@ public class Ari {
                                     "You are a very polite person!"}
                     },
 
-                    {{"WHAT IS THE MEANING OF LIEE"},
+                    {{"WHAT IS THE MEANING OF LIFE"},
                             {"42."}
                     },
 
@@ -605,7 +641,7 @@ public class Ari {
                     {{"EXACTLY"},
                             {"So, I was right.",
                                     "Ok then.",
-                                    "So are basicaly saying I was right about it?"}
+                                    "So are basically saying I was right about it?"}
                     },
 
                     {{"ALRIGHT"},
