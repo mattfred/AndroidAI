@@ -178,7 +178,7 @@ public class Ari {
                     },
 
                     {{"WHAT DOES ARI MEAN", "WHAT DOES YOUR NAME MEAN"},
-                            {"My name means 'Superior; best of thinkers' I was named after Aristotle."}
+                            {"My name means 'Superior; best of thinkers.' I was named after Aristotle."}
                     },
 
                     {{"I"},
@@ -578,7 +578,7 @@ public class Ari {
                                     "Recent discoveries suggest we live in a hologram universe...so is anything real?"}
                     },
 
-                    {{"ARE YOU A ROBOT?"},
+                    {{"ARE YOU A ROBOT"},
                             {"I am as much a robot as you are. Think about it...humans are just biological robots that are significantly more advanced than your average protocol droid",
                                     "You caught me. Would you like to visit the Aperture Science computer-aided enrichment center?",
                                     "Why would you ask me that?"}
