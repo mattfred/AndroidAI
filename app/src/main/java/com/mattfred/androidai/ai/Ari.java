@@ -58,12 +58,17 @@ public class Ari {
 
                     {{"IT'S COLD", "IT IS COLD", "I'M COLD", "I AM COLD"},
                             {"Maybe you should try a Tauntaun blanket",
-                                    "If it is too cold seek out Baron Kelvin, although I had heard he was cryogenically frozen. He is 0K now."}
+                                    "If it is too cold seek out Baron Kelvin, although I had heard he was cryogenically frozen. I think he is 0K now."}
                     },
 
                     {{"WHAT IS THE WEATHER", "WHAT IS THE TEMPERATURE"},
                             {"I'm not able to do internet searches. Better ask someone else",
                                     "All I know is there is a 100% chance of weather today. Unless Skynet des....nevermind"}
+                    },
+
+                    {{"HAHA", "LOL", "ROFL"},
+                            {"If you thought that was funny you should ask me to tell you a joke.",
+                            "I'm glad you liked it. You can always ask me to tell you another joke."}
                     },
 
                     {{"WHAT ARE YOU"},
@@ -123,11 +128,16 @@ public class Ari {
                                     "Issaquah Indians"}
                     },
 
-                    {{"ARE YOU HUNGRY"},
+                    {{"ARE YOU HUNGRY", "HUNGRY"},
                             {"Always.",
                                     "Yes, where is the closest Chipotle?",
                                     "No, I just ate tacos",
                                     "Yes, but I am on a diet. Summer is coming."}
+                    },
+
+                    {{"Thirsty", "ARE YOU THIRSTY",},
+                            {"I could use a nice Zinfandel.",
+                                    "Yes, I think I need some Dihydrogen Monoxide."}
                     },
 
                     {{"WHAT IS YOUR AGE"},
@@ -377,12 +387,13 @@ public class Ari {
                             {"I have no idea of what you are talking about.",
                                     "I'm not sure if I understand what you are talking about.",
                                     "Continue, I'm listening...",
-                                    "Very good conversation!"}
+                                    "Interesting, tell me more!",
+                                    "Tell me more, tell me more, cause it sounds like a drag."}
                     },
 
                     {{"NULL INPUT**"},
                             {"Huh?",
-                                    "What's supposed to mean?",
+                                    "What's that supposed to mean?",
                                     "At least take some time to enter something meaningful.",
                                     "How can I speak to you if you don't want to say anything?"}
                     },
@@ -593,13 +604,13 @@ public class Ari {
                     {{"I DON'T KNOW"},
                             {"Are you sure?",
                                     "Are you really telling me the truth?",
-                                    "So,you don't know?"}
+                                    "So, you don't know?"}
                     },
 
                     {{"NOT REALLY"},
                             {"Ok I see.",
                                     "You don't seem pretty certain.",
-                                    "So,that would be a \"no\"."}
+                                    "So, that would be a \"no\"."}
                     },
 
                     {{"IS THAT TRUE"},
@@ -615,7 +626,7 @@ public class Ari {
                     },
 
                     {{"YOU"},
-                            {"So,you are talking about me.",
+                            {"So, you are talking about me.",
                                     "Why don't we talk about you instead?",
                                     "Are you trying to make fun of me?"}
                     },
